@@ -12,6 +12,7 @@
     2. [Owner Goals](#owner-goals)
 2. [Design](#design)
     1. [Data Models](#data-models)
+3. [Acknowledgements](#design)
 
 # About the project
 Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products.  
@@ -38,4 +39,7 @@ Each design and canvas must have its own description.  However, a description fo
 The artist model includes fields for the artists' social media profiles, to encourage connectivity and engagement.  This information is optional rather than obligatory, as not all artists may wish to use social media, or to engage with all platforms.
 
 ![Data model diagram.](/static/images/data_model.jpg)
+
+# Acknowledgements
+The code present in the project so far follows the Boutique Ado walkthrough from the Code Institute.
 
