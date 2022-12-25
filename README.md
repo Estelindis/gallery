@@ -12,7 +12,7 @@
     2. [Owner Goals](#owner-goals)
 2. [Design](#design)
     1. [Data Models](#data-models)
-3. [Acknowledgements](#design)
+3. [Acknowledgements](#acknowledgements)
 
 # About the project
 Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products.  
