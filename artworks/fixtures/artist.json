@@ -1,0 +1,24 @@
+[
+    {
+      "pk": 1,
+      "model": "artworks.artist",
+      "fields": {
+        "name": "jankalart",
+        "sku_code": "JL01",
+        "friendly_name": "Janka L",
+        "full_name": "Janka Latečková",
+        "location": "Nitra, Slovakia",
+        "description": "“My name is Janka. I have always been drawn to traditional media. I prefer drawing people and animals (fantasy or real), but I enjoy creating fantasy or sci-fi cities and landscapes too. My art is in private collections and magazines. I have won several art contests. My illustrations can be found in e-books, books, and comics. My greatest success is that my art is in the documentary for the extended edition of The Hobbit: The Battle of Five Armies.”",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_artist.jpg",
+        "image": "jl_artist.jpg",
+        "banner_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_banner.jpg",
+        "banner": "jl_banner.jpg",
+        "facebook_url": "https://www.facebook.com/JankaLart",
+        "twitter_url": "https://twitter.com/jankal7",
+        "insta_url": "https://www.instagram.com/jankalart/",
+        "deviant_url": "https://www.deviantart.com/jankalateckova",
+        "pin_url": "https://sk.pinterest.com/JankaLateckova/",
+        "etsy_url": "https://www.etsy.com/shop/JankaLart"
+      }
+    }
+  ]

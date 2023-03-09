@@ -1,0 +1,86 @@
+[
+    {
+      "pk": 1,
+      "model": "artworks.design",
+      "fields": {
+        "name": "tree",
+        "sku_code": "TREE",
+        "friendly_name": "The Tree",
+        "description": "Mighty yet delicate, the tree is complemented by a celtic-style border.",
+        "material": "Coloured pencil drawing on 297 × 210 mm paper.",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_tree.jpg",
+        "image": "jl_001_tree.jpg",
+        "artist": 1
+      }
+    },
+    {
+      "pk": 2,
+      "model": "artworks.design",
+      "fields": {
+        "name": "farewell",
+        "sku_code": "FARE",
+        "friendly_name": "Farewell",
+        "description": "A bittersweet parting. “Nevermore shall I look upon your face.”",
+        "material": "Coloured pencil drawing on 297 × 210 mm paper.",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_farewell.jpg",
+        "image": "jl_001_farewell.jpg",
+        "artist": 1
+      }
+    },
+    {
+      "pk": 3,
+      "model": "artworks.design",
+      "fields": {
+        "name": "lords",
+        "sku_code": "LORDS",
+        "friendly_name": "Elven Lords",
+        "description": "Inspired by the Vanyar of Tolkien's Silmarillion.",
+        "material": "Combined pencil drawing and watercolour painting on 297 × 210 mm paper.",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_lords.jpg",
+        "image": "jl_001_lords.jpg",
+        "artist": 1
+      }
+    },
+    {
+      "pk": 4,
+      "model": "artworks.design",
+      "fields": {
+        "name": "princess",
+        "sku_code": "PRINC",
+        "friendly_name": "The Princess",
+        "description": "She waits in silence, the realm's guardian and its prisoner.",
+        "material": "Combined pencil drawing and watercolour painting on 297 × 210 mm paper.",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_princess.jpg",
+        "image": "jl_001_princess.jpg",
+        "artist": 1
+      }
+    },
+    {
+      "pk": 5,
+      "model": "artworks.design",
+      "fields": {
+        "name": "city",
+        "sku_code": "CITY",
+        "friendly_name": "City of the Elves",
+        "description": "A place of refuge, inspired by Tolkien's Rivendell.",
+        "material": "Combined pencil drawing and watercolour painting on 297 × 210 mm paper.",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_city.jpg",
+        "image": "jl_001_city.jpg",
+        "artist": 1
+      }
+    },
+    {
+      "pk": 6,
+      "model": "artworks.design",
+      "fields": {
+        "name": "twins",
+        "sku_code": "TWINS",
+        "friendly_name": "The Twins",
+        "description": "However far they travel, together is the best place.",
+        "material": "Combined 1 mm black art pen drawing and watercolour painting on 297 × 210 mm paper.",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_twins.jpg",
+        "image": "jl_001_twins.jpg",
+        "artist": 1
+      }
+    }
+  ]

@@ -1,0 +1,92 @@
+[
+    {
+      "pk": 1,
+      "model": "artworks.canvas",
+      "fields": {
+        "name": "bag",
+        "sku_code": "BAG",
+        "friendly_name": "Tote Bag",
+        "description": "Our tote bag is sturdy and stylish, with a vivid double-sided print.",
+        "material": "Shell material: 100% polyester. Strap material: 100% cotton.",
+        "dimensions": "Bag interior: 46 cm x 46 cm (18” x 18”). Strap length: 74 cm (29”).",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_004_princess_bag.jpg",
+        "image": "jl_004_princess_bag.jpg",
+        "price": "11.99"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "artworks.canvas",
+      "fields": {
+        "name": "coasters",
+        "sku_code": "COAST",
+        "friendly_name": "Coasters (Set of 4)",
+        "description": "Our set of 4 coasters keeps your surfaces clean and dry. It is suitable for any drink, hot or cold.",
+        "material": "Surface material: lightweight glossy MDF. Backing material: non-scratch cork.",
+        "dimensions": "Each coaster is 9.5 x 9.5 cm (3.75” x 3.75”)",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_tree_coasters.jpg",
+        "image": "jl_001_tree_coasters.jpg",
+        "price": "15.99"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "artworks.canvas",
+      "fields": {
+        "name": "mug",
+        "sku_code": "MUG",
+        "friendly_name": "Classic Mug",
+        "description": "Our classic ceramic mug is perfect for coffee, tea, or any other drink.",
+        "material": "Dishwasher-safe ceramic.",
+        "dimensions": "Holds 325 ml (11 oz). Diameter is 8.2 cm (3.2”), not including handle.",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_003_lords_mug.jpg",
+        "image": "jl_003_lords_mug.jpg",
+        "price": "13.99"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "artworks.canvas",
+      "fields": {
+        "name": "notebook",
+        "sku_code": "NOTE",
+        "friendly_name": "Spiral Notebook",
+        "description": "Our smart spiral notebook comes with a handy document pocket inside the back cover.",
+        "material": "Cover: 350gsm card. Interior: 90gsm paper stock (ruled lines).",
+        "dimensions": "Height: 20.3 cm (8”). Width: 15.25 cm (6”).",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_006_twins_notebook.jpg",
+        "image": "jl_006_twins_notebook.jpg",
+        "price": "9.99"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "artworks.canvas",
+      "fields": {
+        "name": "pillow",
+        "sku_code": "PILLOW",
+        "friendly_name": "Throw Pillow",
+        "description": "Our accent cushion adds a wow factor to any room. The concealed zip keeps it sleek and easy to clean.",
+        "material": "Cover and filling are machine-washable 100% polyester.",
+        "dimensions": "Height: 45 cm (18”). Width: 45 cm (18”).",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_005_city_pillow.jpg",
+        "image": "jl_005_city_pillow.jpg",
+        "price": "25.99"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "artworks.canvas",
+      "fields": {
+        "name": "print",
+        "sku_code": "PRINT",
+        "friendly_name": "Framed Art Print",
+        "description": "Our gallery-grade framed prints serve as worthy centrepieces for years to come.",
+        "material": "Frame: high-quality timber, painted with a matte black finish. Pane: premium acrylic, clearer and lighter than glass.",
+        "dimensions": "Height: 43.7 cm (17.2”). Width: 30.5 cm (12”).",
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_002_farewell_print.jpg",
+        "image": "jl_002_farewell_print.jpg",
+        "price": "39.99"
+      }
+    }
+  ]

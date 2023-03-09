@@ -1,0 +1,506 @@
+[
+    {
+      "pk": 1,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TREE-BAG",
+        "name": "jankalart_tree_bag",
+        "friendly_name": "Janka L: ‘The Tree’ Tote Bag",
+        "artist": 1,
+        "canvas": 1,
+        "design": 1,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_tree_bag.jpg",
+        "image": "jl_001_tree_bag.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TREE-COAST",
+        "name": "jankalart_tree_coasters",
+        "friendly_name": "Janka L: ‘The Tree’ Coasters (Set of 4)",
+        "artist": 1,
+        "canvas": 2,
+        "design": 1,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_tree_coasters.jpg",
+        "image": "jl_001_tree_coasters.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TREE-MUG",
+        "name": "jankalart_tree_mug",
+        "friendly_name": "Janka L: ‘The Tree’ Classic Mug",
+        "artist": 1,
+        "canvas": 3,
+        "design": 1,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_tree_mug.jpg",
+        "image": "jl_001_tree_mug.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TREE-NOTE",
+        "name": "jankalart_tree_bag",
+        "friendly_name": "Janka L: ‘The Tree’ Spiral Notebook",
+        "artist": 1,
+        "canvas": 4,
+        "design": 1,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_tree_notebook.jpg",
+        "image": "jl_001_tree_notebook.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TREE-PILLOW",
+        "name": "jankalart_tree_bag",
+        "friendly_name": "Janka L: ‘The Tree’ Throw Pillow",
+        "artist": 1,
+        "canvas": 5,
+        "design": 1,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_tree_pillow.jpg",
+        "image": "jl_001_tree_pillow.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TREE-PRINT",
+        "name": "jankalart_tree_bag",
+        "friendly_name": "Janka L: ‘The Tree’ Framed Art Print",
+        "artist": 1,
+        "canvas": 6,
+        "design": 1,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_tree_print.jpg",
+        "image": "jl_001_tree_print.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-FARE-BAG",
+        "name": "jankalart_farewell_bag",
+        "friendly_name": "Janka L: ‘Farewell’ Tote Bag",
+        "artist": 1,
+        "canvas": 1,
+        "design": 2,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_farewell_bag.jpg",
+        "image": "jl_001_farewell_bag.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-FARE-COAST",
+        "name": "jankalart_farewell_coasters",
+        "friendly_name": "Janka L: ‘Farewell’ Coasters (Set of 4)",
+        "artist": 1,
+        "canvas": 2,
+        "design": 2,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_farewell_coasters.jpg",
+        "image": "jl_001_farewell_coasters.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-FARE-MUG",
+        "name": "jankalart_farewell_mug",
+        "friendly_name": "Janka L: ‘Farewell’ Classic Mug",
+        "artist": 1,
+        "canvas": 3,
+        "design": 2,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_farewell_mug.jpg",
+        "image": "jl_001_farewell_mug.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-FARE-NOTE",
+        "name": "jankalart_farewell_bag",
+        "friendly_name": "Janka L: ‘Farewell’ Spiral Notebook",
+        "artist": 1,
+        "canvas": 4,
+        "design": 2,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_farewell_notebook.jpg",
+        "image": "jl_001_farewell_notebook.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-FARE-PILLOW",
+        "name": "jankalart_farewell_bag",
+        "friendly_name": "Janka L: ‘Farewell’ Throw Pillow",
+        "artist": 1,
+        "canvas": 5,
+        "design": 2,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_farewell_pillow.jpg",
+        "image": "jl_001_farewell_pillow.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-FARE-PRINT",
+        "name": "jankalart_farewell_bag",
+        "friendly_name": "Janka L: ‘Farewell’ Framed Art Print",
+        "artist": 1,
+        "canvas": 6,
+        "design": 2,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_farewell_print.jpg",
+        "image": "jl_001_farewell_print.jpg"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-LORDS-BAG",
+        "name": "jankalart_lords_bag",
+        "friendly_name": "Janka L: ‘Elven Lords’ Tote Bag",
+        "artist": 1,
+        "canvas": 1,
+        "design": 3,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_lords_bag.jpg",
+        "image": "jl_001_lords_bag.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-LORDS-COAST",
+        "name": "jankalart_lords_coasters",
+        "friendly_name": "Janka L: ‘Elven Lords’ Coasters (Set of 4)",
+        "artist": 1,
+        "canvas": 2,
+        "design": 3,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_lords_coasters.jpg",
+        "image": "jl_001_lords_coasters.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-LORDS-MUG",
+        "name": "jankalart_lords_mug",
+        "friendly_name": "Janka L: ‘Elven Lords’ Classic Mug",
+        "artist": 1,
+        "canvas": 3,
+        "design": 3,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_lords_mug.jpg",
+        "image": "jl_001_lords_mug.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-LORDS-NOTE",
+        "name": "jankalart_lords_bag",
+        "friendly_name": "Janka L: ‘Elven Lords’ Spiral Notebook",
+        "artist": 1,
+        "canvas": 4,
+        "design": 3,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_lords_notebook.jpg",
+        "image": "jl_001_lords_notebook.jpg"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-LORDS-PILLOW",
+        "name": "jankalart_lords_bag",
+        "friendly_name": "Janka L: ‘Elven Lords’ Throw Pillow",
+        "artist": 1,
+        "canvas": 5,
+        "design": 3,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_lords_pillow.jpg",
+        "image": "jl_001_lords_pillow.jpg"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-LORDS-PRINT",
+        "name": "jankalart_lords_bag",
+        "friendly_name": "Janka L: ‘Elven Lords’ Framed Art Print",
+        "artist": 1,
+        "canvas": 6,
+        "design": 3,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_lords_print.jpg",
+        "image": "jl_001_lords_print.jpg"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-PRINC-BAG",
+        "name": "jankalart_princess_bag",
+        "friendly_name": "Janka L: ‘The Princess’ Tote Bag",
+        "artist": 1,
+        "canvas": 1,
+        "design": 4,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_princess_bag.jpg",
+        "image": "jl_001_princess_bag.jpg"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-PRINC-COAST",
+        "name": "jankalart_princess_coasters",
+        "friendly_name": "Janka L: ‘The Princess’ Coasters (Set of 4)",
+        "artist": 1,
+        "canvas": 2,
+        "design": 4,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_princess_coasters.jpg",
+        "image": "jl_001_princess_coasters.jpg"
+      }
+    },
+    {
+      "pk": 21,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-PRINC-MUG",
+        "name": "jankalart_princess_mug",
+        "friendly_name": "Janka L: ‘The Princess’ Classic Mug",
+        "artist": 1,
+        "canvas": 3,
+        "design": 4,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_princess_mug.jpg",
+        "image": "jl_001_princess_mug.jpg"
+      }
+    },
+    {
+      "pk": 22,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-PRINC-NOTE",
+        "name": "jankalart_princess_bag",
+        "friendly_name": "Janka L: ‘The Princess’ Spiral Notebook",
+        "artist": 1,
+        "canvas": 4,
+        "design": 4,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_princess_notebook.jpg",
+        "image": "jl_001_princess_notebook.jpg"
+      }
+    },
+    {
+      "pk": 23,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-PRINC-PILLOW",
+        "name": "jankalart_princess_bag",
+        "friendly_name": "Janka L: ‘The Princess’ Throw Pillow",
+        "artist": 1,
+        "canvas": 5,
+        "design": 4,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_princess_pillow.jpg",
+        "image": "jl_001_princess_pillow.jpg"
+      }
+    },
+    {
+      "pk": 24,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-PRINC-PRINT",
+        "name": "jankalart_princess_bag",
+        "friendly_name": "Janka L: ‘The Princess’ Framed Art Print",
+        "artist": 1,
+        "canvas": 6,
+        "design": 4,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_princess_print.jpg",
+        "image": "jl_001_princess_print.jpg"
+      }
+    },
+    {
+      "pk": 25,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-CITY-BAG",
+        "name": "jankalart_city_bag",
+        "friendly_name": "Janka L: ‘City of the Elves’ Tote Bag",
+        "artist": 1,
+        "canvas": 1,
+        "design": 5,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_city_bag.jpg",
+        "image": "jl_001_city_bag.jpg"
+      }
+    },
+    {
+      "pk": 26,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-CITY-COAST",
+        "name": "jankalart_city_coasters",
+        "friendly_name": "Janka L: ‘City of the Elves’ Coasters (Set of 4)",
+        "artist": 1,
+        "canvas": 2,
+        "design": 5,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_city_coasters.jpg",
+        "image": "jl_001_city_coasters.jpg"
+      }
+    },
+    {
+      "pk": 27,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-CITY-MUG",
+        "name": "jankalart_city_mug",
+        "friendly_name": "Janka L: ‘City of the Elves’ Classic Mug",
+        "artist": 1,
+        "canvas": 3,
+        "design": 5,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_city_mug.jpg",
+        "image": "jl_001_city_mug.jpg"
+      }
+    },
+    {
+      "pk": 28,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-CITY-NOTE",
+        "name": "jankalart_city_bag",
+        "friendly_name": "Janka L: ‘City of the Elves’ Spiral Notebook",
+        "artist": 1,
+        "canvas": 4,
+        "design": 5,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_city_notebook.jpg",
+        "image": "jl_001_city_notebook.jpg"
+      }
+    },
+    {
+      "pk": 29,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-CITY-PILLOW",
+        "name": "jankalart_city_bag",
+        "friendly_name": "Janka L: ‘City of the Elves’ Throw Pillow",
+        "artist": 1,
+        "canvas": 5,
+        "design": 5,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_city_pillow.jpg",
+        "image": "jl_001_city_pillow.jpg"
+      }
+    },
+    {
+      "pk": 30,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-CITY-PRINT",
+        "name": "jankalart_city_bag",
+        "friendly_name": "Janka L: ‘City of the Elves’ Framed Art Print",
+        "artist": 1,
+        "canvas": 6,
+        "design": 5,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_city_print.jpg",
+        "image": "jl_001_city_print.jpg"
+      }
+    },
+    {
+      "pk": 31,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TWINS-BAG",
+        "name": "jankalart_twins_bag",
+        "friendly_name": "Janka L: ‘The Twins’ Tote Bag",
+        "artist": 1,
+        "canvas": 1,
+        "design": 6,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_twins_bag.jpg",
+        "image": "jl_001_twins_bag.jpg"
+      }
+    },
+    {
+      "pk": 32,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TWINS-COAST",
+        "name": "jankalart_twins_coasters",
+        "friendly_name": "Janka L: ‘The Twins’ Coasters (Set of 4)",
+        "artist": 1,
+        "canvas": 2,
+        "design": 6,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_twins_coasters.jpg",
+        "image": "jl_001_twins_coasters.jpg"
+      }
+    },
+    {
+      "pk": 33,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TWINS-MUG",
+        "name": "jankalart_twins_mug",
+        "friendly_name": "Janka L: ‘The Twins’ Classic Mug",
+        "artist": 1,
+        "canvas": 3,
+        "design": 6,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_twins_mug.jpg",
+        "image": "jl_001_twins_mug.jpg"
+      }
+    },
+    {
+      "pk": 34,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TWINS-NOTE",
+        "name": "jankalart_twins_bag",
+        "friendly_name": "Janka L: ‘The Twins’ Spiral Notebook",
+        "artist": 1,
+        "canvas": 4,
+        "design": 6,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_twins_notebook.jpg",
+        "image": "jl_001_twins_notebook.jpg"
+      }
+    },
+    {
+      "pk": 35,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TWINS-PILLOW",
+        "name": "jankalart_twins_bag",
+        "friendly_name": "Janka L: ‘The Twins’ Throw Pillow",
+        "artist": 1,
+        "canvas": 5,
+        "design": 6,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_twins_pillow.jpg",
+        "image": "jl_001_twins_pillow.jpg"
+      }
+    },
+    {
+      "pk": 36,
+      "model": "artworks.artwork",
+      "fields": {
+        "sku": "JL01-TWINS-PRINT",
+        "name": "jankalart_twins_bag",
+        "friendly_name": "Janka L: ‘The Twins’ Framed Art Print",
+        "artist": 1,
+        "canvas": 6,
+        "design": 6,
+        "image_url": "https://raw.githubusercontent.com/Estelindis/gallery/main/media/jl_001_twins_print.jpg",
+        "image": "jl_001_twins_print.jpg"
+      }
+    }
+  ]
