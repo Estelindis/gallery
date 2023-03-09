@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Artwork
+from .models import Artwork, Canvas, Design
 
 # Create your views here.
 
@@ -11,8 +11,20 @@ def all_artworks(request):
 
     artworks = Artwork.objects.all()
     query = None
+    canvasses = None
+    designs = None
 
     if request.GET:
+        if 'canvas' in request.GET:
+            canvasses = request.GET['canvas'].split(',')
+            artworks = artworks.filter(canvas__name__in=canvasses)
+            canvasses = Canvas.objects.filter(name__in=canvasses)
+
+        if 'design' in request.GET:
+            designs = request.GET['design'].split(',')
+            artworks = artworks.filter(design__name__in=designs)
+            designs = Design.objects.filter(name__in=designs)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -21,12 +33,18 @@ def all_artworks(request):
 
             queries = (
                 Q(friendly_name__icontains=query) |
-                Q(sku__icontains=query))
+                Q(artist__full_name__icontains=query) |
+                Q(design__description__icontains=query) |
+                Q(design__material__icontains=query) |
+                Q(canvas__description__icontains=query) |
+                Q(canvas__material__icontains=query))
             artworks = artworks.filter(queries)
 
     context = {
         'artworks': artworks,
         'search_term': query,
+        'current_canvasses': canvasses,
+        'current_designs': designs,
     }
 
     return render(request, 'artworks/artworks.html', context)
