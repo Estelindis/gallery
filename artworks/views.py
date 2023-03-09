@@ -19,7 +19,9 @@ def all_artworks(request):
                 messages.error(request, "Please enter criteria to search.")
                 return redirect(reverse('artworks'))
 
-            queries = Q(friendly_name__icontains=query)
+            queries = (
+                Q(friendly_name__icontains=query) |
+                Q(sku__icontains=query))
             artworks = artworks.filter(queries)
 
     context = {
