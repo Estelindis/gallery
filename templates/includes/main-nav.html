@@ -6,9 +6,9 @@
                 Artwork
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-artworks-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Design</a>
-                <a href="" class="dropdown-item ">By Canvas</a>
+                <a href="{% url 'artworks' %}?sort=canvas__price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'artworks' %}" class="dropdown-item ">By Design</a>
+                <a href="{% url 'artworks' %}" class="dropdown-item ">By Canvas</a>
                 <a href="{% url 'artworks' %}" class="dropdown-item">All Artworks</a>
             </div>
         </li>

@@ -13,8 +13,20 @@ def all_artworks(request):
     query = None
     canvasses = None
     designs = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            artworks = artworks.order_by(sortkey)
+
         if 'canvas' in request.GET:
             canvasses = request.GET['canvas'].split(',')
             artworks = artworks.filter(canvas__name__in=canvasses)
@@ -40,11 +52,14 @@ def all_artworks(request):
                 Q(canvas__material__icontains=query))
             artworks = artworks.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'artworks': artworks,
         'search_term': query,
         'current_canvasses': canvasses,
         'current_designs': designs,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'artworks/artworks.html', context)
