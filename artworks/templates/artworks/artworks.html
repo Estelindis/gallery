@@ -20,7 +20,27 @@
         </div>
         <div class="row">
             <div class="artwork-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
+                <div class="row mt-1 mb-2"><div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="canvas__price_asc" {% if current_sorting == 'canvas__price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="canvas__price_desc" {% if current_sorting == 'canvas__price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="canvas__friendly_name_asc" {% if current_sorting == 'canvas__friendly_name_asc' %}selected{% endif %}>Canvas (A-Z)</option>
+                            <option value="canvas__friendly_name_desc" {% if current_sorting == 'canvas__friendly_name_desc' %}selected{% endif %}>Canvas (Z-A)</option>
+                            <option value="design__friendly_name_asc" {% if current_sorting == 'design__friendly_name_asc' %}selected{% endif %}>Design (A-Z)</option>
+                            <option value="design__friendly_name_desc" {% if current_sorting == 'design__friendly_name_desc' %}selected{% endif %}>Design (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-center text-md-left">
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                            <span class="small"><a href="{% url 'artworks' %}">Artworks Home</a> | </span>
+                        {% endif %}
+                        {{ artworks|length }} Artworks{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                    </p>
+                </div></div>
                 <div class="row">
                     {% for artwork in artworks %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
