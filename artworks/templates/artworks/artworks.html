@@ -92,4 +92,58 @@
             </div>
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                if (selectedVal == "canvas__price_asc") {
+                    var sort = "canvas__price";
+                    var direction = "asc";
+                } else if (selectedVal == "canvas__price_desc") {
+                    var sort = "canvas__price";
+                    var direction = "desc";
+                } else if (selectedVal == "canvas__friendly_name_asc") {
+                    var sort = "canvas__friendly_name";
+                    var direction = "asc";
+                } else if (selectedVal == "canvas__friendly_name_desc") {
+                    var sort = "canvas__friendly_name";
+                    var direction = "desc";
+                } else if (selectedVal == "design__friendly_name_asc") {
+                    var sort = "design__friendly_name";
+                    var direction = "asc";
+                } else if (selectedVal == "design__friendly_name_desc") {
+                    var sort = "design__friendly_name";
+                    var direction = "desc";
+                }
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}
