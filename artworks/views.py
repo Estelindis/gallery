@@ -75,3 +75,27 @@ def artwork_detail(request, artwork_id):
     }
 
     return render(request, 'artworks/artwork_detail.html', context)
+
+
+def all_designs(request):
+    """ A view to show all designs """
+
+    designs = Design.objects.all()
+
+    context = {
+        'designs': designs,
+    }
+
+    return render(request, 'artworks/designs.html', context)
+
+
+def all_canvasses(request):
+    """ A view to show all canvasses """
+
+    canvasses = Canvas.objects.all()
+
+    context = {
+        'canvasses': canvasses,
+    }
+
+    return render(request, 'artworks/canvasses.html', context)
