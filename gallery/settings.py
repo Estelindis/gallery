@@ -26,7 +26,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['gallery-of-dreams.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['gallery-of-dreams.herokuapp.com',
+    'localhost',
+    '8000-estelindis-gallery-xjz4rstmall.ws-eu98.gitpod.io']
 
 
 # Application definition
