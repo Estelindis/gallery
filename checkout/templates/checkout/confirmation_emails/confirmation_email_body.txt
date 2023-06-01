@@ -11,7 +11,8 @@ Grand Total: €{{ order.grand_total }}
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
 
-If no one is available to receive your order, your on-file phone number, {{ order.phone_number }}, will receive a call regarding alternative delivery arrangements.
+If no one is available to receive your order, your on-file phone number, {{ order.phone_number }}, 
+will receive a call regarding alternative delivery arrangements.
 
 If you have any questions, feel free to contact us at {{ contact_email }}.
 
