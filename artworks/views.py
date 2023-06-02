@@ -103,13 +103,13 @@ def all_canvasses(request):
 
 
 def add_artwork(request):
-    """ Add an artwork to the store """
+    """ Add an artwork to the gallery """
     if request.method == 'POST':
         form = ArtworkForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added artwork!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('add_artwork'))
         else:
             messages.error(
                 request,
@@ -120,6 +120,32 @@ def add_artwork(request):
     template = 'artworks/add_artwork.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_artwork(request, artwork_id):
+    """ Edit an artwork in the gallery """
+    artwork = get_object_or_404(Artwork, pk=artwork_id)
+    if request.method == 'POST':
+        form = ArtworkForm(request.POST, request.FILES, instance=artwork)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated artwork!')
+            return redirect(reverse('artwork_detail', args=[artwork.id]))
+        else:
+            messages.error(
+                request,
+                'Failed to update artwork. Please ensure the form is valid.')
+    else:
+        form = ArtworkForm(instance=artwork)
+        messages.info(request, f'You are editing {artwork.friendly_name}')
+
+    template = 'artworks/edit_artwork.html'
+    context = {
+        'form': form,
+        'artwork': artwork,
     }
 
     return render(request, template, context)
