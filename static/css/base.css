@@ -10,6 +10,18 @@ body {
     font-family: 'Lato';
 }
 
+h1, h2, h3, hr, h5, h6 {
+    font-family: 'David Libre', serif;
+}
+
+.flowing-text {
+    font-family: 'Dancing Script', cursive;
+}
+
+.large-text {
+    font-size: x-large;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -20,6 +32,7 @@ body {
 }
 
 .logo-font {
+    font-family: 'David Libre', serif;
     text-transform: uppercase;
 }
 
