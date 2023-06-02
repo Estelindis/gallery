@@ -30,6 +30,12 @@
                 <div class="artwork-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ artwork.design.friendly_name }} — {{ artwork.canvas.friendly_name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">€{{ artwork.canvas.price }}</p>
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_artwork' artwork.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_artwork' artwork.id %}">Delete</a>
+                        </small>
+                    {% endif %}
                     <p class="mb-0">Artist: {{ artwork.artist.friendly_name }}</p>
                     <p class="mt-3">Design: {{ artwork.design.description }}</p>
                     <p class="mt-3">Medium: {{ artwork.design.material }}</p>

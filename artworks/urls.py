@@ -7,5 +7,9 @@ urlpatterns = [
     path('designs/', views.all_designs, name='designs'),
     path('canvasses/', views.all_canvasses, name='canvasses'),
     path('add/', views.add_artwork, name='add_artwork'),
-    path('edit/<int:product_id>/', views.edit_product, name='edit_product'),
+    path('edit/<int:artwork_id>/', views.edit_artwork, name='edit_artwork'),
+    path(
+        'delete/<int:artwork_id>/',
+        views.delete_artwork,
+        name='delete_artwork'),
 ]

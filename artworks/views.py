@@ -107,9 +107,9 @@ def add_artwork(request):
     if request.method == 'POST':
         form = ArtworkForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            artwork = form.save()
             messages.success(request, 'Successfully added artwork!')
-            return redirect(reverse('add_artwork'))
+            return redirect(reverse('artwork_detail', args=[artwork.id]))
         else:
             messages.error(
                 request,
@@ -149,3 +149,11 @@ def edit_artwork(request, artwork_id):
     }
 
     return render(request, template, context)
+
+
+def delete_artwork(request, artwork_id):
+    """ Delete an artwork from the gallery """
+    artwork = get_object_or_404(Artwork, pk=artwork_id)
+    artwork.delete()
+    messages.success(request, 'Artwork deleted!')
+    return redirect(reverse('artworks'))
