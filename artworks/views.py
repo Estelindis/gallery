@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Artist, Canvas, Design, Artwork
 from .forms import ArtworkForm
@@ -102,8 +103,13 @@ def all_canvasses(request):
     return render(request, 'artworks/canvasses.html', context)
 
 
+@login_required
 def add_artwork(request):
     """ Add an artwork to the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ArtworkForm(request.POST, request.FILES)
         if form.is_valid():
@@ -125,8 +131,13 @@ def add_artwork(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_artwork(request, artwork_id):
     """ Edit an artwork in the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
     artwork = get_object_or_404(Artwork, pk=artwork_id)
     if request.method == 'POST':
         form = ArtworkForm(request.POST, request.FILES, instance=artwork)
@@ -151,8 +162,13 @@ def edit_artwork(request, artwork_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_artwork(request, artwork_id):
     """ Delete an artwork from the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
     artwork = get_object_or_404(Artwork, pk=artwork_id)
     artwork.delete()
     messages.success(request, 'Artwork deleted!')
