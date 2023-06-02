@@ -2,10 +2,23 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.views.generic.detail import DetailView
 from .models import Artist, Canvas, Design, Artwork
-from .forms import ArtworkForm
+from .forms import ArtistForm, ArtworkForm
 
 # Create your views here.
+
+
+def artist_detail(request, artist_id):
+    """ A view to show individual artist details """
+
+    artist = get_object_or_404(Artist, pk=artist_id)
+
+    context = {
+        'artist': artist,
+    }
+
+    return render(request, 'artworks/artist_detail.html', context)
 
 
 def all_artworks(request):
@@ -173,3 +186,75 @@ def delete_artwork(request, artwork_id):
     artwork.delete()
     messages.success(request, 'Artwork deleted!')
     return redirect(reverse('artworks'))
+
+
+@login_required
+def add_artist(request):
+    """ Add an artist to the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ArtistForm(request.POST, request.FILES)
+        if form.is_valid():
+            artist = form.save()
+            messages.success(request, 'Successfully added artist!')
+            return redirect(reverse('artist_detail', args=[artist.id]))
+        else:
+            messages.error(
+                request,
+                'Failed to add artist. '
+                'Please ensure the form is valid.')
+    else:
+        form = ArtistForm()
+    template = 'artworks/add_artist.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_artist(request, artist_id):
+    """ Edit an artist in the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
+    artist = get_object_or_404(Artist, pk=artist_id)
+    if request.method == 'POST':
+        form = ArtistForm(request.POST, request.FILES, instance=artist)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated artist!')
+            return redirect(reverse('artist_detail', args=[artist.id]))
+        else:
+            messages.error(
+                request,
+                'Failed to update artist. Please ensure the form is valid.')
+    else:
+        form = ArtistForm(instance=artist)
+        messages.info(request, f'You are editing {artist.name}')
+
+    template = 'artworks/edit_artist.html'
+    context = {
+        'form': form,
+        'artist': artist,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_artist(request, artist_id):
+    """ Delete an artist from the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
+    artist = get_object_or_404(Artist, pk=artist_id)
+    artist.delete()
+    messages.success(request, 'Artist deleted!')
+    return redirect(reverse('artists'))

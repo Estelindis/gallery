@@ -52,7 +52,8 @@
                 Artist
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="artist-link">
-                <a href="" class="dropdown-item">Janka L</a>
+                <a href="{% url 'artworks' %}?artist=jankalart" class="dropdown-item">Artworks by Janka L</a>
+                <a href="{% url 'artist_detail' 1 %}" class="dropdown-item">About Janka L</a>
             </div>
         </li>
 

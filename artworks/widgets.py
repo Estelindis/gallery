@@ -8,3 +8,11 @@ class CustomClearableFileInput(ClearableFileInput):
     input_text = _('')
     template_name = \
         'artworks/custom_widget_templates/custom_clearable_file_input.html'
+
+
+class CustomClearableBannerInput(ClearableFileInput):
+    clear_checkbox_label = _('Remove')
+    initial_text = _('Current Banner')
+    input_text = _('')
+    template_name = \
+        'artworks/custom_widget_templates/custom_clearable_banner_input.html'

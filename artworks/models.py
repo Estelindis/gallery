@@ -40,7 +40,7 @@ class Artist(models.Model):
         max_length=1024,
         null=True,
         blank=True,
-        verbose_name="Image URL")
+        verbose_name="Banner URL")
     banner = models.ImageField(
         null=True,
         blank=True)
