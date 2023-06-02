@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Artwork, Canvas, Design
+from .models import Artist, Canvas, Design, Artwork
+from .forms import ArtworkForm
 
 # Create your views here.
 
@@ -99,3 +100,14 @@ def all_canvasses(request):
     }
 
     return render(request, 'artworks/canvasses.html', context)
+
+
+def add_artwork(request):
+    """ Add an artwork to the store """
+    form = ArtworkForm()
+    template = 'artworks/add_artwork.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
