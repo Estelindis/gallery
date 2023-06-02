@@ -104,7 +104,19 @@ def all_canvasses(request):
 
 def add_artwork(request):
     """ Add an artwork to the store """
-    form = ArtworkForm()
+    if request.method == 'POST':
+        form = ArtworkForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added artwork!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(
+                request,
+                'Failed to add artwork. '
+                'Please ensure the form is valid.')
+    else:
+        form = ArtworkForm()
     template = 'artworks/add_artwork.html'
     context = {
         'form': form,
