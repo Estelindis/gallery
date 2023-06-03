@@ -51,6 +51,11 @@ h1, h2, h3, hr, h5, h6 {
     color: white;
 }
 
+.bg-black {
+    background: black;
+    color: white;
+}
+
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
@@ -281,6 +286,25 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
+}
+
+/* mail chimp */
+
+#mc_embed_signup {
+    clear:left;
+    font:14px; 
+    width:600px;
+    vertical-align: bottom
+}
+
+#subscribe_email {
+    width: 60% !important;
+}
+
+#subscribe_submit {
+    width: 60% !important;
+    color: white;
+    background-color: #000;
 }
 
 /* fixed top navbar only on medium and up */
