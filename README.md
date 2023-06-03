@@ -15,6 +15,9 @@
 3. [SEO & Marketing](#seo-&-marketing)
     1. [Marketing](#marketing)
     2. [Keywords](#keywords)
+    3. [Facebook](#facebook)
+    4. [Newsletter](#newsletter)
+    5. [GDPR](#gdpr)
 4. [Acknowledgements](#acknowledgements)
 
 # About the project
@@ -106,6 +109,21 @@ While developing Gallery of Dreams, I engaged in substantial keyword research vi
 - "art gifts" - this is too broad; results tend to include a lot of art supplies.
 - "geek art" - this is also too broad; results include a ride range of intellectual properties not relevant to the aesthetic of Gallery of Dreams.
 - "stores like redbubble" - returns a lot of list-style articles, in which our shop might benefit from being included; but a good proportion of these seem to be spam (AI-generated, in some cases), which would be counter-productive.  Additionally, mentioning RedBubble explicitly might encourage users of Gallery of Dreams to browse on RedBubble rather than with us.
+
+## Facebook
+
+Gallery of Dreams has its own Facebook page, which is linked in the footer of the index page.  (This footer is not present when browsing the store, to remove distractions while shopping.)
+
+![FB 1.](/static/images/fb_page_01.jpg)
+![FB 2.](/static/images/fb_page_02.jpg)
+
+## Newsletter
+
+Gallery of Dreams has newsletter sign-up functionality embedded in the footer of the index page, enabled by MailChimp.
+
+## GDPR
+
+A link to the privacy policy of Gallery of Dreams is present in the footer of the index page, via the user shield icon.
 
 # Acknowledgements
 The code present in the project so far follows the Boutique Ado walkthrough from the Code Institute, adapted for the different data models used in Gallery of Dreams.
