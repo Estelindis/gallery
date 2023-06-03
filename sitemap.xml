@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/bag/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?sort=canvas__price&amp;direction=asc</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/designs/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/canvasses/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?design=tree</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?design=farewell</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?design=lords</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?design=princess</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?design=city</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?design=twins</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?canvas=print</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?canvas=notebook</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?canvas=pillow</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?canvas=bag</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?canvas=mug</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?canvas=coasters</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/?artist=jankalart</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/artist/1/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/34/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/10/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/28/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/4/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/22/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/16/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/1/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/7/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/13/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/19/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/25/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/31/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/3/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/27/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/21/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/15/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/9/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/33/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/32/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/26/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/14/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/2/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/20/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/8/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/35/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/17/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/5/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/23/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/29/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/11/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/36/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/24/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/18/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/6/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/12/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gallery-of-dreams.herokuapp.com/artworks/30/</loc>
+  <lastmod>2023-06-02T23:28:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
