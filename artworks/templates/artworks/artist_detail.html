@@ -31,14 +31,12 @@
                 <div class="artwork-details-container mb-5 mt-md-5">
                     <br>
                     <h2 class="text-uppercase">{{ artist.full_name }}</h2>
-                    <h5 class="text-uppercase">About the artist</h5>
-                    <p class="mt-3" style="text-align: justify;">{{ artist.description }}</p>
+                    <h5 class="text-uppercase">About the artist
                     {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_artist' artist.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_artist' artist.id %}">Delete</a>
-                        </small>
+                            | &nbsp; <a href="{% url 'edit_artist' artist.id %}">Edit</a>
                     {% endif %}
+                    </h5>
+                    <p class="mt-3" style="text-align: justify;">{{ artist.description }}</p>
                     <p class="mt-3">
                         <span class="icon">
                             <i class="fa fa-map-marker"></i>
