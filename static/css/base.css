@@ -41,31 +41,31 @@ h1, h2, h3, hr, h5, h6 {
 }
 
 .shop-now-button {
-    background: black;
+    background: #262323;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #262323;
     color: white;
 }
 
 .bg-black {
-    background: black;
+    background: #262323;
     color: white;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    color: #262323 !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #262323;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #262323;
     color: white !important;
 }
 
@@ -80,15 +80,15 @@ h1, h2, h3, hr, h5, h6 {
 }
 
 .text-black {
-    color: #000 !important;
+    color: #262323 !important;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #262323 !important;
 }
 
 .bg-black {
-    background: #000 !important;
+    background: #262323 !important;
 }
 
 .overlay {
@@ -147,7 +147,7 @@ input[name='q']::placeholder {
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid #262323;
     position: absolute;
     top: -10px;
     right: 36px;
@@ -209,7 +209,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #262323;
     border-radius: 0;
 }
 
@@ -233,8 +233,8 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #262323;
+    border: 1px solid #262323;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -304,7 +304,7 @@ input[name='q']::placeholder {
 #subscribe_submit {
     width: 60% !important;
     color: white;
-    background-color: #000;
+    background-color: #262323;
 }
 
 /* fixed top navbar only on medium and up */
