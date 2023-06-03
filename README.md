@@ -12,7 +12,10 @@
     2. [Owner Goals](#owner-goals)
 2. [Design](#design)
     1. [Data Models](#data-models)
-3. [Acknowledgements](#acknowledgements)
+3. [SEO & Marketing](#seo-&-marketing)
+    1. [Marketing](#marketing)
+    2. [Keywords](#keywords)
+4. [Acknowledgements](#acknowledgements)
 
 # About the project
 Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products ("canvasses").  At present, the site remains a work in progress, hosting the work of just one artist.  The data model shows significant differentiation from the Code Institute Boutique Ado walkthrough, being designed with a view to strong central control.  With so many potential combinations of canvas plus design, the number of artworks can balloon quite quickly, so the ability to change many artworks with a single edit to one canvas or design is the guiding principle.  However, some other elements of the project, particularly the styling, have yet to be strongly differentiated from the walkthrough.
@@ -41,6 +44,62 @@ The artist model includes fields for the artists' social media profiles, to enco
 
 ![Data model diagram 1.](/static/images/data_model_1.jpg)
 ![Data model diagram 2.](/static/images/data_model_2.jpg)
+
+# SEO & Marketing
+
+## Marketing
+
+When developing Gallery of Dreams, I asked myself the following questions:
+
+**Who are your users?**
+- People who like fan art, particularly from the fantasy genre.
+- Fans of fantasy literature, particularly the works of JRR Tolkien (along with connected films and TV).
+- Fans of hobbies to the fantasy genre, particularly tabletop and live-action roleplaying.
+- People who like well-made fan art, regardless of genre.
+- People who like art prints, including homeware printed with art.
+- People who want to buy gifts for the above groups.
+
+**On which online platforms & social media would you find many of your users?**
+- DeviantArt (where the flagship artist has a strong presence)
+- Pinterest (which consistently turns up frequently in searches related to the flagship artist)
+- Etsy (where the flagship artist sells commissions and other bespoke items; this is complimentary to our shop, not a competitor)
+- Facebook
+- Instagram
+- Twitter
+
+**What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?**
+- Many users enjoy looking at art online and would also like to have a piece of art in their home.
+- Many other users, appreciating that their family and friends are fans of art, would like to purchase art-printed items as gifts.
+- Gallery of Dreams can offer special value to users who want a curated selection based on genre and aesthetic, along with a focus on the artist.
+
+**Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?**
+- Periodic discount codes could be offered via newsletter.
+
+**What are the goals of your business?**
+- Gallery of Dreams is inspired by sites like RedBubble, which sells art-printed items from a huge range of artists.  However, because RedBubble has so many artists, designs, and products, it is saturated.  Saturation makes it difficult for artists to stand out.  It is also hard for shoppers to find exactly what they want.  By comparison, Gallery of Dreams would offer a more curated experience.  While Gallery of Dreams would not serve as many users as RedBubble, it would offer a more pleasant experience for shoppers seeking items with a fantasy art aesthetic, which in turn would offer benefits to featured artists.
+
+**Which marketing strategies would offer the best ways to meet those goals - free to low cost, or purchased advertising?**
+- As a comparatively small business, Gallery of Dreams would focus on social media rather than paid advertising.
+- The flagship artist has a strong social media presence. Linking to these platforms would increase user engagement.
+
+## Keywords
+
+While developing Gallery of Dreams, I engaged in substantial keyword research via [wordtracker.com](https://www.wordtracker.com) and Google search.  In the case of Google, auto-complete was often helpful in guiding searches towards common topics.
+
+**Keywords chosen**
+- "tolkien fan art" - gives fewer results than "tolkien art"; however, the results are more relevant.
+- "tolkien artists" - results are relevant to the site aesthetic; fans of notable Tolkien artists like Alan Lee and John Howe will find a similar art style in the site's flagship artist, who lists these artists among her inspirations.
+- "art prints" - a very high volume of searches, with substantial competition; as Gallery of Dreams literally sells art prints, however, the use of these words is unavoidable.
+- "fantasy art prints" - a smaller volume of searches than "art prints," but more relevant.
+- "wall art gifts" - also a smaller volume of searches than "art gifts" (particularly as Gallery of Dreams does not only sell wall art), yet, overall, still more relevant.
+- "jankalart" - the username most commonly employed today by the flagship artist; this will also be represented as Janka L.
+- "jankolas" - the username formerly employed by the flagship artist, which still turns up in a lot of searches (particularly on Pinterest).  It doesn't make sense to include an old username in user-readable text, as this might dilute the artist's current branding, but the old username can still be employed judiciously in page heads.  (Note: a quick comparison between the 2009 version of the flagship artist's DeviantArt page via the Internet Archive and her DeviantArt page today shows the same pronouns being used for both usernames.  The use of the old username therefore should not raise issues of ["deadnaming"](https://en.wikipedia.org/wiki/Deadnaming).)
+
+**Notable keywords not chosen**
+- "tolkien art" - as Tolkien created many illustrations, this returns a lot of art by Tolkien himself rather than fan art inspired by his works.
+- "art gifts" - this is too broad; results tend to include a lot of art supplies.
+- "geek art" - this also too broad; results include a ride range of intellectual properties not relevant to the aesthetic of Gallery of Dreams.
+- "stores like redbubble" - returns a lot of lists, in which our shop might benefit from being included; but a good proportion of these seem to be spam (AI-generated, in some cases), which would likely be counter-productive.  Additionally, mentioning RedBubble explicitly might encourage users of Gallery of Dreams to browse on RedBubble rather than with us.
 
 # Acknowledgements
 The code present in the project so far follows the Boutique Ado walkthrough from the Code Institute, adapted for the different data models used in Gallery of Dreams.
