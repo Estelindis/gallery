@@ -5,8 +5,6 @@ from django.db.models import Q
 from .models import Artist, Canvas, Design, Artwork
 from .forms import ArtistForm, ArtworkForm
 
-# Create your views here.
-
 
 def artist_detail(request, artist_id):
     """ A view to show individual artist details """
@@ -116,8 +114,18 @@ def all_canvasses(request):
 
 
 @login_required
+def curate(request):
+    """ A view to access the directory of create views """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
+    return render(request, 'artworks/curate.html')
+
+
+@login_required
 def add_artwork(request):
-    """ Add an artwork to the gallery """
+    """ A view to add an artwork to the gallery """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only gallery curators can do that.')
         return redirect(reverse('home'))
@@ -145,7 +153,7 @@ def add_artwork(request):
 
 @login_required
 def edit_artwork(request, artwork_id):
-    """ Edit an artwork in the gallery """
+    """ A view to edit an artwork in the gallery """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only gallery curators can do that.')
         return redirect(reverse('home'))
@@ -176,7 +184,7 @@ def edit_artwork(request, artwork_id):
 
 @login_required
 def delete_artwork(request, artwork_id):
-    """ Delete an artwork from the gallery """
+    """ A view to delete an artwork from the gallery; no confirmation """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only gallery curators can do that.')
         return redirect(reverse('home'))

@@ -15,15 +15,15 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
-                <h2 class="logo-font mb-4">Artwork Curation</h2>
-                <h5 class="text-muted">Add an Artwork</h5>
+                <h2 class="logo-font mb-4">Artist Curation</h2>
+                <h5 class="text-muted">Add an Artist</h5>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_artwork' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'add_artist' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -33,8 +33,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'curate' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Artwork</button>
+                        <a class="btn btn-outline-black rounded-0" href="{% url 'artworks' %}">Cancel</a>
+                        <button class="btn btn-black rounded-0" type="submit">Add Artist</button>
                     </div>
                 </form>
             </div>            

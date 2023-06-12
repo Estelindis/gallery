@@ -4,6 +4,9 @@ from .models import Artist, Canvas, Design, Artwork
 
 
 class ArtistForm(forms.ModelForm):
+    """
+    Model form for the artists selling artworks on the site.
+    """
 
     class Meta:
         model = Artist
@@ -26,6 +29,9 @@ class ArtistForm(forms.ModelForm):
 
 
 class ArtworkForm(forms.ModelForm):
+    """
+    Model form for the individual artworks sold on the site.
+    """
 
     class Meta:
         model = Artwork
