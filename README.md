@@ -36,6 +36,33 @@ Gallery of Dreams is envisaged as an online shop where artists can sell their de
 - Use centralised methods to apply wide-ranging edits to related canvasses and designs, which will be inherited by all related artworks: done.
 - Process payments securely: done.
 
+|Link | Title | User Story | Epic/Milestone | Priority | Done? |
+|---------|---------|---------|---------|---------|---------|
+|[1](https://github.com/Estelindis/gallery/issues/1)|Clear site purpose|As a site user, I can instantly identify the purpose of the site so that I can know if the site interests me without wasting time.|General Site Use|Must have|Yes|
+|[2](https://github.com/Estelindis/gallery/issues/2)|Site deployment|As a site user, I can access the site at its public URL so that I can view the site.|General Site Use|Must have|Yes|
+|[3](https://github.com/Estelindis/gallery/issues/3)|Registration|As a site user, I can quickly and easily register with a verifiable email so that my details can be saved in my personal profile.|General Site Use|Must have|Yes|
+|[4](https://github.com/Estelindis/gallery/issues/4)|Log in/out|As a site user, I can quickly and easily log in or out so that I can access my profile functionality (e.g. view order history, edit standard delivery info).|General Site Use|Must have|Yes|
+|[7](https://github.com/Estelindis/gallery/issues/7)|Recover password|As a site user, I can quickly and easily reset my password so that I can retain access to my profile, even if I forget my password.|General Site Use|Must have|Yes|
+|[5](https://github.com/Estelindis/gallery/issues/5)|View artist|As a site user, I can view artist details so that I can learn more about the artist and access related social media.|Browsing and Shopping|Could have|Yes|
+|[6](https://github.com/Estelindis/gallery/issues/6)|View artwork list|As a site user, I can view a list of artworks so that I can choose which artworks I might buy.|Browsing and Shopping|Must have|Yes|
+|[8](https://github.com/Estelindis/gallery/issues/8)|View artwork details|As a site user, I can view individual artwork details so that I can differentiate between artworks in finer detail.|Browsing and Shopping|Must have|Yes|
+|[9](https://github.com/Estelindis/gallery/issues/9)|Search artworks|As a site user, I can search artworks by keyword so that I can quickly and easily find a specific item, or type of item.|Browsing and Shopping|Must have|Yes|
+|[10](https://github.com/Estelindis/gallery/issues/10)|Sort by price|As a site user, I can sort artworks by price so that I can quickly and easily find items that meet my shopping criteria (i.e. within a certain price range).|Browsing and Shopping|Must have|Yes|
+|[15](https://github.com/Estelindis/gallery/issues/15)|Sort by canvas & design|As a site user, I can sort artworks by canvas or design so that I can experience the choice of alternative sorting methods (not just sort by price).|Browsing and Shopping|Could have|Yes|
+|[11](https://github.com/Estelindis/gallery/issues/11)|Filter artworks|As a site user, I can filter artworks (e.g. by canvas) so that I can browse the specific types of items that interest me (e.g. only art prints).|Browsing and Shopping|Must have|Yes|
+|[12](https://github.com/Estelindis/gallery/issues/12)|Add artworks to bag|As a site user, I can easily add the items I want, in the quantity I want, to my bag so that I can enjoy a smooth purchasing experience.|Bag and Checkout|Must have|Yes|
+|[13](https://github.com/Estelindis/gallery/issues/13)|View purchase total|As a site user, I can easily view my purchase total at any time so that I can avoid over-spending.|Bag and Checkout|Must have|Yes|
+|[14](https://github.com/Estelindis/gallery/issues/14)|View order summary|As a site user, I can easily view a summary of my order so that I can see exactly what I would be buying, and paying, if I went to the check out now.|Bag and Checkout|Must have|Yes|
+|[16](https://github.com/Estelindis/gallery/issues/16)|Enter payment info|As a site user, I can easily enter payment information so that I can check out quickly and smoothly.|Bag and Checkout|Must have|Yes|
+|[17](https://github.com/Estelindis/gallery/issues/17)|Secure transaction|As a site user, I can complete a secure transaction using a trusted payment method so that I can be confident that my payment information is safe when buying from this site.|Bag and Checkout|Must have|Yes|
+|[18](https://github.com/Estelindis/gallery/issues/18)|Order confirmation|As a site user, I can receive an order confirmation so that I can retain a record of my purchase.|Bag and Checkout|Must have|Yes|
+|[19](https://github.com/Estelindis/gallery/issues/19)|Add artworks|As a superuser, I can create an artwork via the front end so that I can add new items to the shop without needing the admin panel.|Admin|Must have|Yes|
+|[20](https://github.com/Estelindis/gallery/issues/20)|Update artworks|As a superuser, I can update an artwork via the front end so that I can edit shop items without needing the admin panel.|Admin|Must have|Yes|
+|[21](https://github.com/Estelindis/gallery/issues/21)|Delete artworks|As a superuser, I can delete an artwork via the front end so that I can remove items from the shop without needing the admin panel.|Admin|Must have|Yes|
+|[22](https://github.com/Estelindis/gallery/issues/22)|Create canvasses & designs|As a superuser, I can create a canvas or a design via the front end so that I can add canvasses or designs to the shop without needing the admin panel.|Admin|Could have|Yes|
+|[23](https://github.com/Estelindis/gallery/issues/23)|Create canvasses & designs|As a superuser, I can edit a canvas or a design via the front end so that I can modify canvasses or designs without needing the admin panel.|Admin|Could have|Yes|
+
+
 # Design
 
 ## Data Models
