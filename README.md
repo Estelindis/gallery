@@ -12,29 +12,39 @@
     2. [Owner Goals](#owner-goals)
 2. [Design](#design)
     1. [Data Models](#data-models)
-3. [SEO & Marketing](#seo-&-marketing)
+3. [Agile Development](#agile-development)
+    1. [Data Models](#data-models)
+4. [SEO & Marketing](#seo-&-marketing)
     1. [Marketing](#marketing)
     2. [Keywords](#keywords)
     3. [Facebook](#facebook)
     4. [Newsletter](#newsletter)
     5. [GDPR](#gdpr)
-4. [Acknowledgements](#acknowledgements)
+5. [Acknowledgements](#acknowledgements)
 
 # About the project
 Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products ("canvasses").  At present, the site remains a work in progress, hosting the work of just one artist.  The data model shows significant differentiation from the Code Institute Boutique Ado walkthrough, being designed with a view to strong central control.  With so many potential combinations of canvas plus design, the number of artworks can balloon quite quickly, so the ability to change many artworks with a single edit to one canvas or design is the guiding principle.  However, some other elements of the project, particularly the styling, have yet to be strongly differentiated from the walkthrough.
 
-## User Stories: User Goals
-- Easily navigate a readable, accessible website from any platform: done.
-- Browse products by artist, design, and type of product: done.
-- Once a purchase is chosen, make quick and secure payments: done.
-- Have the option to register a user account, where order information can be quickly accessed and default delivery information can be stored: done.
+## User Goals
+- Easily navigate a readable, accessible website from any platform.
+- Browse products by artist, design, and type of product.
+- Once a purchase is chosen, make quick and secure payments.
+- Have the option to register a user account, where order information can be quickly accessed and default delivery information can be stored.
 
-## User Stories: Owner Goals
-- Present products to users in a clear, attractive manner: done.
-- Increase user engagement by promoting artists' social media accounts: done.
-- Have the ability to create, update, and delete artist and product data from the front end of the application: done.
-- Use centralised methods to apply wide-ranging edits to related canvasses and designs, which will be inherited by all related artworks: done.
-- Process payments securely: done.
+## Owner Goals
+- Present products to users in a clear, attractive manner.
+- Increase user engagement by promoting artists' social media accounts.
+- Have the ability to create, update, and delete artist and product data from the front end of the application.
+- Use centralised methods to apply wide-ranging edits to related canvasses and designs, which will be inherited by all related artworks.
+- Process payments securely.
+
+# Agile Development
+The [GitHub kanban board for Gallery of Dreams](https://github.com/users/Estelindis/projects/1) describes an agile development process on the basis of user stories.  Stories are categorised according to epics/milestones, development priority, and completion status.
+
+- Once tasks were identified, issues were added to the "to do" column.
+- All issues were labelled "must have" or "could have."  As not every imagined feature can generally be completed with a project's timeframe, it is important to work on tasks in order of priority.
+- For tasks in development, the corresponding issues could be moved to the "in progress" column.
+- Once sufficient content had been developed and tested to address tasks, the corresponding issues could be moved to the "done" column.  
 
 |Link | Title | User Story | Epic/Milestone | Priority | Done? |
 |---------|---------|---------|---------|---------|---------|
