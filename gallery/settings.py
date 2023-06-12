@@ -29,7 +29,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = [
     'gallery-of-dreams.herokuapp.com',
     'localhost',
-    '8000-estelindis-gallery-xjz4rstmall.ws-eu98.gitpod.io']
+    '8000-estelindis-gallery-xjz4rstmall.ws-eu99.gitpod.io']
 
 
 # Application definition
