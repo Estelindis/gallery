@@ -6,16 +6,20 @@ from .models import Artist, Canvas, Design, Artwork
 from .forms import ArtistForm, CanvasForm, DesignForm, ArtworkForm
 
 
-def artist_detail(request, artist_id):
-    """ A view to show individual artist details """
+""" CURATE: a gateway for front-end create & update """
 
-    artist = get_object_or_404(Artist, pk=artist_id)
 
-    context = {
-        'artist': artist,
-    }
+@login_required
+def curate(request):
+    """ A view to access the directory of create views """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
 
-    return render(request, 'artworks/artist_detail.html', context)
+    return render(request, 'artworks/curate.html')
+
+
+""" ARTWORK VIEWS """
 
 
 def all_artworks(request):
@@ -87,40 +91,6 @@ def artwork_detail(request, artwork_id):
     }
 
     return render(request, 'artworks/artwork_detail.html', context)
-
-
-def all_designs(request):
-    """ A view to show all designs """
-
-    designs = Design.objects.all()
-
-    context = {
-        'designs': designs,
-    }
-
-    return render(request, 'artworks/designs.html', context)
-
-
-def all_canvasses(request):
-    """ A view to show all canvasses """
-
-    canvasses = Canvas.objects.all()
-
-    context = {
-        'canvasses': canvasses,
-    }
-
-    return render(request, 'artworks/canvasses.html', context)
-
-
-@login_required
-def curate(request):
-    """ A view to access the directory of create views """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only gallery curators can do that.')
-        return redirect(reverse('home'))
-
-    return render(request, 'artworks/curate.html')
 
 
 @login_required
@@ -195,9 +165,24 @@ def delete_artwork(request, artwork_id):
     return redirect(reverse('artworks'))
 
 
+""" ARTIST VIEWS """
+
+
+def artist_detail(request, artist_id):
+    """ Read: a view to show individual artist details """
+
+    artist = get_object_or_404(Artist, pk=artist_id)
+
+    context = {
+        'artist': artist,
+    }
+
+    return render(request, 'artworks/artist_detail.html', context)
+
+
 @login_required
 def add_artist(request):
-    """ Add an artist to the gallery """
+    """ Create: a view to add an artist """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only gallery curators can do that.')
         return redirect(reverse('home'))
@@ -225,7 +210,7 @@ def add_artist(request):
 
 @login_required
 def edit_artist(request, artist_id):
-    """ Edit an artist in the gallery """
+    """ Update: a view to edit an artist """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only gallery curators can do that.')
         return redirect(reverse('home'))
@@ -256,7 +241,7 @@ def edit_artist(request, artist_id):
 
 @login_required
 def delete_artist(request, artist_id):
-    """ Delete an artist from the gallery """
+    """ Delete: a view to remove an artist """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only gallery curators can do that.')
         return redirect(reverse('home'))
@@ -267,9 +252,24 @@ def delete_artist(request, artist_id):
     return redirect(reverse('artists'))
 
 
+""" CANVAS VIEWS """
+
+
+def all_canvasses(request):
+    """ Read: A view to show all designs """
+
+    canvasses = Canvas.objects.all()
+
+    context = {
+        'canvasses': canvasses,
+    }
+
+    return render(request, 'artworks/canvasses.html', context)
+
+
 @login_required
 def add_canvas(request):
-    """ Add a canvas to the gallery """
+    """ Create: a view to add a canvas """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only gallery curators can do that.')
         return redirect(reverse('home'))
@@ -296,8 +296,54 @@ def add_canvas(request):
 
 
 @login_required
+def edit_canvas(request, canvas_id):
+    """ Update: a view to edit a canvas """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
+    canvas = get_object_or_404(Canvas, pk=canvas_id)
+    if request.method == 'POST':
+        form = CanvasForm(request.POST, request.FILES, instance=canvas)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated canvas!')
+            return redirect(reverse('canvasses'))
+        else:
+            messages.error(
+                request,
+                'Failed to update canvas. Please ensure the form is valid.')
+    else:
+        form = CanvasForm(instance=canvas)
+        messages.info(request, f'You are editing {canvas.friendly_name}')
+
+    template = 'artworks/edit_canvas.html'
+    context = {
+        'form': form,
+        'canvas': canvas,
+    }
+
+    return render(request, template, context)
+
+
+""" DESIGN VIEWS: create, read, and update designs from the front-end """
+
+
+def all_designs(request):
+    """ Read: A view to show all designs """
+
+    designs = Design.objects.all()
+
+    context = {
+        'designs': designs,
+    }
+
+    return render(request, 'artworks/designs.html', context)
+
+
+@login_required
 def add_design(request):
-    """ Add a design to the gallery """
+    """ Create: a view to add a design """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only gallery curators can do that.')
         return redirect(reverse('home'))
@@ -318,6 +364,37 @@ def add_design(request):
     template = 'artworks/add_design.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_design(request, design_id):
+    """ Update: a view to edit a design """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
+    design = get_object_or_404(Design, pk=design_id)
+    if request.method == 'POST':
+        form = DesignForm(request.POST, request.FILES, instance=design)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated design!')
+            return redirect(reverse('designs'))
+        else:
+            messages.error(
+                request,
+                'Failed to update design. Please ensure the form is valid.')
+    else:
+        form = DesignForm(instance=design)
+        messages.info(request, f'You are editing {design.friendly_name}')
+
+    template = 'artworks/edit_design.html'
+    context = {
+        'form': form,
+        'design': design,
     }
 
     return render(request, template, context)

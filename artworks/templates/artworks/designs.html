@@ -37,6 +37,11 @@
                                 <div class="card-body pb-0">
                                     <h3 class="mb-0">{{ design.friendly_name }}</h3>
                                     <p class="mb-0">By {{ design.artist.friendly_name }}</p>
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_design' design.id %}">Edit</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

@@ -37,6 +37,11 @@
                                 <div class="card-body pb-0">
                                     <h3 class="mb-0">{{ canvas.friendly_name }}</h3>
                                 </div>
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_canvas' canvas.id %}">Edit</a>
+                                    </small>
+                                {% endif %}
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
