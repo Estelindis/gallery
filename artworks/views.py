@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Artist, Canvas, Design, Artwork
-from .forms import ArtistForm, ArtworkForm
+from .forms import ArtistForm, CanvasForm, ArtworkForm
 
 
 def artist_detail(request, artist_id):
@@ -265,3 +265,31 @@ def delete_artist(request, artist_id):
     artist.delete()
     messages.success(request, 'Artist deleted!')
     return redirect(reverse('artists'))
+
+
+@login_required
+def add_canvas(request):
+    """ Add a canvas to the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only gallery curators can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = CanvasForm(request.POST, request.FILES)
+        if form.is_valid():
+            canvas = form.save()
+            messages.success(request, 'Successfully added canvas!')
+            return redirect(reverse('curate'))
+        else:
+            messages.error(
+                request,
+                'Failed to add canvas. '
+                'Please ensure the form is valid.')
+    else:
+        form = CanvasForm()
+    template = 'artworks/add_canvas.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

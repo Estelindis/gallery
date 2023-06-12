@@ -28,6 +28,27 @@ class ArtistForm(forms.ModelForm):
             field.widget.attrs['class'] = 'border-black rounded-0'
 
 
+class CanvasForm(forms.ModelForm):
+    """
+    Model form for the canvasses on which designs can be printed.
+    """
+
+    class Meta:
+        model = Canvas
+        fields = '__all__'
+
+    image = forms.ImageField(
+        label='Image',
+        required=False,
+        widget=CustomClearableFileInput)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-black rounded-0'
+
+
 class ArtworkForm(forms.ModelForm):
     """
     Model form for the individual artworks sold on the site.
