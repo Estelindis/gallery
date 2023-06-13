@@ -27,7 +27,7 @@
     4. [Newsletter](#newsletter)
     5. [GDPR](#gdpr)
     6. [External Links](#external-links)
-7. [Testing](#testing)
+7. [Manual Testing](#manual-testing)
 8. [Deployment](#deployment)
     1. [Forking the Repository on GitHub](#forking-the-repository-on-github)
     2. [Cloning the Repository on GitHub](#cloning-the-repository-on-github)
@@ -246,9 +246,90 @@ All external links are directly connected to Gallery of Dreams, linking to socia
 - No external links are paid or distrusted (which would require a "nofollow" relationship attribute).
 - No external links are sponsored or compensated (which would require a "sponsored" relationship attribute).
 
-# Testing
+# Manual Testing
 
-Placeholder text.
+User and owner goals were tested to ensure that the aims of the project were achieved.
+
+## Goal: Accessible Content
+This condenses the following goals:
+- (User) Easily navigate a readable, accessible website from any platform.
+- (User) Browse artworks by artist, design, and canvas.
+- (Owner) Present artworks to users in a clear, attractive manner.
+
+To test this functionality, an unregistered user follows these steps:
+- Navigate to Gallery of Dreams.
+- Via the "Browse the Gallery" button on the homepage - or, alternatively, via any of the artwork links in the navbars - gain access to the visually presented list of artworks.
+- To view an individual artwork, click or press the image associated with that artwork in the grid.
+- Return to browsing via the "keep shopping" button - or, alternatively, via navbar link.
+
+On following these steps, did the expected results occur?
+- Yes, tests passed, as the following images show.  The home page is shown in desktop view.  Further screenshots show the artworks list view and an artwork detail page.  Text is legible.  Colours provide sufficient contrast for accessibility.
+
+![Homepage.](/static/images/test01_01.jpg)
+![List view.](/static/images/test01_02.jpg)
+![Detail view.](/static/images/test01_03.jpg)
+
+## Goal: Registration
+This covers the following goal:
+- (User) Have the option to register a user account, where order information can be quickly accessed and default delivery information can be stored.
+
+To test this functionality, an unregistered user follows these steps:
+- Navigate to Gallery of Dreams.
+- Click "My Account," then choose "Register" from the dropdown.
+- Input registration info.
+- Check the registered email for a verification link, then follow the link.
+- Following email validation, the user can log in, update their profile, and access order information (if any).
+
+On following these steps, did the expected results occur?
+- Yes, tests passed, as the following images show.
+
+![Registration and Profile, Test 1.](/static/images/test02_01.jpg)
+![Registration and Profile, Test 2.](/static/images/test02_02.jpg)
+![Registration and Profile, Test 3.](/static/images/test02_03.jpg)
+![Registration and Profile, Test 4.](/static/images/test02_04.jpg)
+![Registration and Profile, Test 5.](/static/images/test02_05.jpg)
+
+
+## Goal: Smooth, Secure Buying Experience
+This condenses the following goals:
+- (User) Once a purchase is chosen, make quick and secure payments.
+- (Owner) Process payments securely.
+
+To test this functionality, a user (registered or otherwise) follows these steps:
+- Navigate to Gallery of Dreams.
+- Choose one or more items to purchase from the artwork list.
+- Click or press "go to secure checkout" from the bag add pop-up; alternatively, click the bag icon.
+- In the bag view, click "secure checkout" to begin the check out process.
+- Fill payment information, using one of Stripe's test cards. (See the test image with card info, or [check Stripe's testing documentation](https://stripe.com/docs/testing). Test cards with or without additional security checks can be used; both transaction types are pictured.)
+- Press or click the "complete order" button.
+- The user receives an order confirmation, and Stripe confirms the "successful" (for a test) payment atttempt.
+
+On following these steps, did the expected results occur?
+- Yes, tests passed, as the following images show.  
+- Note: test images are from a range of different test transactions, to demonstrate multiple card types.
+
+![Payment, Test 1.](/static/images/test03_01.jpg)
+![Payment, Test 2.](/static/images/test03_02.jpg)
+![Payment, Test 3.](/static/images/test03_03.jpg)
+![Payment, Test 4.](/static/images/test03_04.jpg)
+![Payment, Test 5.](/static/images/test03_05.jpg)
+![Payment, Test 6.](/static/images/test03_06.jpg)
+
+## Goal: Social Connectivity
+This covers the following goal:
+- (Owner) Increase user engagement by promoting artists' social media accounts.
+
+To test this functionality, an unregistered user follows these steps:
+- Navigate to Gallery of Dreams.
+
+## Goal: Front-end CRUD
+This condenses the following goals:
+- (Owner) Have the ability to create, update, and delete data from the front end of the application.
+- (Owner) Use centralised methods to apply wide-ranging edits to canvasses and designs, which will be inherited by all related artworks.
+
+To test this functionality, an unregistered user follows these steps:
+- Navigate to Gallery of Dreams.
+
 
 # Deployment
 
