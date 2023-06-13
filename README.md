@@ -1,7 +1,7 @@
 # Gallery of Dreams - Project Portfolio 5 - E-commerce Applications
 ## by Siobhán Mooney
 
-![Image of the site on various platforms.](/static/images/products.jpg)
+![Image of the site on various platforms.](/static/images/responsive.jpg)
 
 ### [Click here to view the deployed app.](https://gallery-of-dreams.herokuapp.com/)
 ### [Click here to view the repository.](https://github.com/Estelindis/gallery)
@@ -82,6 +82,7 @@ Desktop detail wirefame: artwork detail.
 ## Screenshots
 The wireframes above can be compared to screenshots from the deployed site.
 
+![Mobile index.](/static/images/responsive_mobile.jpg)
 ![Gallery index.](/static/images/gallery_index.jpg)
 ![Artwork detail.](/static/images/artwork_detail.jpg)
 ![Artworks.](/static/images/artworks.jpg)
