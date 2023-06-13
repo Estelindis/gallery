@@ -145,6 +145,7 @@ When developing Gallery of Dreams, I asked myself the following questions:
 ## Keywords
 
 While developing Gallery of Dreams, I engaged in substantial keyword research via [wordtracker.com](https://www.wordtracker.com) and Google search.  In the case of Google, auto-complete was often helpful in guiding searches towards common topics.
+Of the various keywords chosen, some are employed throughout the site and on linked social media, while others are employed as meta keywords in the header.  As keyword "spam" in the header is broadly to be avoided, header keywords are employed in cases where a set of keywords provides good search results but doesn't fit particularly well in natural readable text.
 
 **Keywords chosen**
 - "character art" - strong results with low competition; related image searches are in keeping with the fantasy aesthetic of Gallery of Dreams.  Particularly strong potential for engagement with people who might use artworks to represent characters in their RPGs, who then get attached to that artwork and want to own related printed items.
