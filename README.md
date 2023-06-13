@@ -11,8 +11,9 @@
     1. [User Goals](#user-goals)
     2. [Owner Goals](#owner-goals)
 2. [Design](#design)
-    1. [Data Model](#data-model)
-    2. [CRUD Functionality for Custom Models](#crud-functionality-for-custom-models)
+    1. [Wireframes](#wireframes)
+    2. [Data Model](#data-model)
+    3. [CRUD Functionality for Custom Models](#crud-functionality-for-custom-models)
 3. [Agile Development](#agile-development)
 4. [Security](#security)
     1. [Site Security](#site-security)
@@ -84,6 +85,27 @@ The [GitHub kanban board for Gallery of Dreams](https://github.com/users/Estelin
 
 
 # Design
+
+## Wireframes
+Visually, Gallery of Dreams was planned to follow the styling of Boutique Ado in a broad sense, while adding a few elements of custom flair (e.g. a distinctive logo).  
+- More custom styling, while highly desirable, was treated as a stretch goal, to be pursued if time permitted after implementing and documenting the site's essential features.
+- Broadly, in the final product, the degree of custom styling implemented was less than what was initially desired.
+
+Mobile wireframes:
+
+![Mobile wireframes.](/static/images/wireframes_mobile.jpg)
+
+Desktop wirefame: home page.
+
+![Desktop home wireframe.](/static/images/wireframe_home_desktop.jpg)
+
+Desktop list wirefame: artwork list.
+
+![Desktop wireframe.](/static/images/wireframe_list_desktop.jpg)
+
+Desktop detail wirefame: artwork detail.
+
+![Desktop wireframe.](/static/images/wireframe_art_detail_desktop.jpg)
 
 ## Data Model
 As well as its custom models, Gallery of Dreams employs the following unaltered models from the Boutique Ado walkthrough: Order; OrderLineItem; and UserProfile.  The unaltered UserProfile model permits logged-in users to read and update their profiles.  All further commentary in this Data Model section concerns the project's four custom models.
