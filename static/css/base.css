@@ -368,3 +368,21 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+/* fix the footer on mobile */
+@media (max-width: 780px) {
+    body {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+    .footer {
+        flex-shrink: 0 !important;
+        height: 20% !important;
+      }
+
+    #fb_link, #priv_link {
+        display: none !important;
+    }
+
+}
