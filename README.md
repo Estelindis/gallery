@@ -24,7 +24,12 @@
     4. [Newsletter](#newsletter)
     5. [GDPR](#gdpr)
     6. [External Links](#external-links)
-6. [Acknowledgements](#acknowledgements)
+6. [Deployment](#deployment)
+    1. [Forking the Repository on GitHub](#forking-the-repository-on-github)
+    2. [Cloning the Repository on GitHub](#cloning-the-repository-on-github)
+    3. [Project setup](#project-setup)
+    4. [Deploying to Heroku](#deploying-to-heroku)
+7. [Acknowledgements](#acknowledgements)
 
 # About the project
 Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products ("canvasses").  At present, the site remains a work in progress, hosting the work of just one artist.  The data model shows significant differentiation from the Code Institute Boutique Ado walkthrough, being designed with a view to strong central control.  With so many potential combinations of canvas plus design, the number of artworks can balloon quite quickly, so the ability to change many artworks with a single edit to one canvas or design is the guiding principle.  However, some other elements of the project, particularly the styling, have yet to be strongly differentiated from the walkthrough.
@@ -183,6 +188,54 @@ A link to the privacy policy of Gallery of Dreams is present in the footer of th
 All external links are directly connected to Gallery of Dreams, linking to social media for the shop or its flagship artist.  These links function as unpaid marketing, harnessing the power of the internet's "word of mouth."
 - No external links are paid or distrusted (which would require a "nofollow" relationship attribute).
 - No external links are sponsored or compensated (which would require a "sponsored" relationship attribute).
+
+# Deployment
+
+## Forking the Repository on GitHub
+
+1. Log in to GitHub and locate the GitHub Repository that you want to fork.
+2. In the upper right of the repository, click the "Fork" button.
+3. A copy of the repository will now be available within your repositories.
+
+## Cloning the Repository on GitHub
+
+1. In the upper section of the repository, click the dropdown named "Code."
+2. In the "Clone" section, choose "HTTPS" if it is not already selected, then copy the URL.
+3. Open a bash terminal in your IDE of choice.
+4. Change the current working directory to the location you want for the cloned directory.
+5. Type "git clone" and paste the URL copied from GitHub.
+6. After pressing Enter, the clone of your repository will be created.
+
+## Project Setup
+
+The following steps are provided as an alternative to cloning the repository. As project development is an extensive process, for the most part these steps provide an outline only.
+- Create a Python project in a virtual environment, using your IDE of choice.
+- Copy requirements.txt from this Gallery of Dreams repository into your project directory.  Then, in the bash terminal, use the command ```pip install -r requirements.txt``` to install all required packages for Gallery of Dreams.  (Alternatively, install the packages manually, as listed in the requirements file in this Gallery of Dreams repository.  Start with Django, applying the version shown in requirements.txt.  Use the command ```pip install django==3.2 ```.  Then install each other listed package, paying attention to version.  Once done, create your own new requirements file via ```pip freeze > requirements.txt```.  This process should result in a requirements file identical to the one in this repository.)
+- As Django documentation is extensive and well-written, [follow official documentation](https://docs.djangoproject.com/en/3.2/intro/tutorial01/) to start your Django project via the ```django-admin startproject``` command.  In the case of Gallery of Dreams, the base project is called ```gallery```.  A subfolder will automatically be created with the same name as your Django project.
+- Create each app using the ```manage.py startapp``` command.  The apps for Gallery of Dreams are as follows: artworks; bag; checkout; home; profiles.
+- Apply database settings as needed.  If using the default SQLite settings to store data locally during development, no change to the base settings.py file will be required; but to write to a non-local database (e.g. for deployment to Heroku), other database settings will be needed.
+- Create models as laid out in each models.py file of each app; then ```makemigrations``` (first performing a ```makemigrations --dry-run``` to check for mistakes); finally, ```migrate``` (again, after first performing ```migrate --plan``` to see which migrations will take place).
+- Implement settings, templates, views, URLS, etc., following the guidance of the current repository.
+- Create a directory for static files during development, with the understanding that alternative arragements will be required for static files when deploying to Heroku. 
+- Set environment variables.  If using GitPod, variables can be accessed by clicking your user portrait in the top right of the screen, choosing User Settings from the dropdown, then choosing Variables in the list that appears on the right of the page.  To enable local debugging while preventing live deployment in a state of ```Debug=True```, create an environment variable called DEVELOPMENT and set this to True (noting that this variable will not be set when deploying to Heroku).  To handle Stripe payments, set up three further environment variables: STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, and STRIPE_WH_SECRET.  These values must be kept secret and should be determined by your personal Stripe settings.
+
+## Deploying to Heroku
+
+- Log into Heroku (creating an account if needed).
+- Click the "New" button from the dashboard, under the header in the top right corner.
+- Choose "Create new app."
+- Enter your application name, which has to be unique. Then select your region and click "Create App."
+- From your project page, click the "Settings" tab and scroll to "Config Vars."
+- Enter "PORT" in the KEY input field, then enter "8000" in the VALUE input field.
+- Click the "Add" button to add the Convig Vars.
+- On the same page, scroll to the buildpacks section and click "Add Buildpack."
+- Add the Python and node.js buildpacks, ensuring that the Python buildpack is listed above the node.js buildpack.
+- Go back to the tabs at the top of the page, then select the "Deploy" tab.
+- Select the Github deployment method.
+- Search for your repository name, then click the "Connect" button to link your repository.
+- At the bottom of that page, select deployment type: Automatic or Manual. By pressing "Enable Automatic Deploys," the project will redeploy to Heroku every time it is pushed to GitHub. If Manual deployments are preferred, then choose a branch to deploy ("main" by default) and press "Deploy Branch."  In either case, there will be a short wait while the project is deployed.  
+- Broadly speaking, manual deployment is preferred for this kind of project, so that DEBUG in settings.py can be set to True during development but False during deployment.
+
 
 # Acknowledgements
 The code present in the project so far follows the Boutique Ado walkthrough from the Code Institute, adapted for the different data models used in Gallery of Dreams.
