@@ -10,10 +10,6 @@ urlpatterns = [
         'artist/edit/<int:artist_id>/',
         views.edit_artist,
         name='edit_artist'),
-    path(
-        'artist/delete/<int:artist_id>/',
-        views.delete_artist,
-        name='delete_artist'),
     # designs
     path('designs/', views.all_designs, name='designs'),
     path('designs/add/', views.add_design, name='add_design'),
