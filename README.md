@@ -315,20 +315,28 @@ On following these steps, did the expected results occur?
 ![Payment, Test 5.](/static/images/test03_05.jpg)
 ![Payment, Test 6.](/static/images/test03_06.jpg)
 
-## Goal: Social Connectivity
-This covers the following goal:
-- (Owner) Increase user engagement by promoting artists' social media accounts.
-
-To test this functionality, an unregistered user follows these steps:
-- Navigate to Gallery of Dreams.
-
-## Goal: Front-end CRUD
+## Goal: Front-end database access [test-case: promote social connectivity]
 This condenses the following goals:
-- (Owner) Have the ability to create, update, and delete data from the front end of the application.
-- (Owner) Use centralised methods to apply wide-ranging edits to canvasses and designs, which will be inherited by all related artworks.
+- (Owner) Increase user engagement by promoting artists' social media accounts.
+- (Owner) Have the ability to create, update, and delete data from the front end of the application (note: this case tests artist creation).
 
-To test this functionality, an unregistered user follows these steps:
+To test this functionality, a logged-in superuser follows these steps:
 - Navigate to Gallery of Dreams.
+- Click "My Account," then choose "Gallery Curation" from the dropdown.
+- In Gallery Curation, choose "Add an Artist."
+- Fill in the artist creation form, making sure to include some social media details.
+- Submit the form. 
+- On successful form submission, the superuser is redirected to the detail page of the newly created artist.
+- Only social media fields that were filled in will appear on the artist's page.
+
+On following these steps, did the expected results occur?
+- Yes, tests passed, as the following images show.  
+
+![Artist creation, Test 1.](/static/images/test04_01.jpg)
+![Artist creation, Test 2.](/static/images/test04_02.jpg)
+![Artist creation, Test 3.](/static/images/test04_03.jpg)
+![Artist creation, Test 4.](/static/images/test04_04.jpg)
+![Artist creation, Test 5.](/static/images/test04_05.jpg)
 
 
 # Deployment
