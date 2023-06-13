@@ -61,7 +61,7 @@ The data model of Gallery of Dreams is designed with a view to strong central co
 Visually, Gallery of Dreams was planned to follow the styling of Boutique Ado in a broad sense, while adding a few elements of custom flair (e.g. a distinctive logo).  
 - More custom styling, while highly desirable, was treated as a stretch goal, to be pursued if time permitted after implementing and documenting the site's essential features.
 - Broadly, in the final product, the degree of custom styling implemented was less than what was initially desired.
-- With more time, I would have changed the sharp button and field style to a rounded style; employed a less stark (though still minimalistic) colour scheme; and repositioned some key visual elements.
+- With more time, the sharp button and field style would have been changed to a rounded style; a less stark (though still minimalistic) colour scheme would have been employed; and some key visual elements would have been repositioned.
 
 Mobile wireframes:
 
