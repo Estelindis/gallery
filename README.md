@@ -11,9 +11,9 @@
     1. [User Goals](#user-goals)
     2. [Owner Goals](#owner-goals)
 2. [Design](#design)
-    1. [Data Models](#data-models)
+    1. [Data Model](#data-model)
+    2. [CRUD Functionality for Custom Models](#crud-functionality-for-custom-models)
 3. [Agile Development](#agile-development)
-    1. [Data Models](#data-models)
 4. [Security](#security)
     1. [Site Security](#site-security)
     2. [Secure Payments](#secure-payments)
@@ -32,7 +32,8 @@
 7. [Acknowledgements](#acknowledgements)
 
 # About the project
-Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products ("canvasses").  At present, the site remains a work in progress, hosting the work of just one artist.  The data model shows significant differentiation from the Code Institute Boutique Ado walkthrough, being designed with a view to strong central control.  With so many potential combinations of canvas plus design, the number of artworks can balloon quite quickly, so the ability to change many artworks with a single edit to one canvas or design is the guiding principle.  However, some other elements of the project, particularly the styling, have yet to be strongly differentiated from the walkthrough.
+Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products ("canvasses").  At present, the site hosts the work of just one artist: Janka Latečková.  In the site as currently presented, Janka functions the flagship artist; the case for adding more artists will be proven, or disproven, by how successfully her work is showcased.  
+The data model of Gallery of Dreams is designed with a view to strong central control.  With so many potential combinations of canvas plus design, the number of artworks could balloon quite quickly, so the ability to change many artworks with a single edit to one canvas or design is the guiding principle.  However, some other elements of the project, particularly the styling, could be more strongly differentiated from the Code Institute's Boutique Ado walkthrough.
 
 ## User Goals
 - Easily navigate a readable, accessible website from any platform.
@@ -84,19 +85,38 @@ The [GitHub kanban board for Gallery of Dreams](https://github.com/users/Estelin
 
 # Design
 
-## Data Models
-The data model of Gallery of Dreams is organised to describe artists, designs, "canvasses" (the types of product on which a design is printed), and artworks (individual combinations of design and canvas).  This model should allow users to restrict their view by the various categories, should they so wish.  If, for instance, users wish to browse all tote bags regardless of design, the data model should permit this easily.  
+## Data Model
+As well as its custom models, Gallery of Dreams employs the following unaltered models from the Boutique Ado walkthrough: Order; OrderLineItem; and UserProfile.  The unaltered UserProfile model permits logged-in users to read and update their profiles.  All further commentary in this Data Model section concerns the project's four custom models.
 
-Each design and canvas must have its own description.  However, artworks do not have their own descriptions, but rather inherit various descriptive fields from the related models.  For instance,item price is associated with the canvas rather than the product, as (for instance) each mug will cost the same regardless of the design printed on it.  This ensures that if (for example) the price of the mug canvas is changed, the prices of all mug artworks are automatically changed, inheriting from the canvas.
+The data model for the custom models of Gallery of Dreams is organised to describe artists, designs, canvasses, and artworks.  The main strength of this data model is central control of various artwork attributes without having to individually edit artworks.
+- Artists are the persons responsible for original drawings and paintings. 
+- Designs are the original drawings and paintings themseves.
+- Canvasses are the types of products on which designs are printed.  
+- Artworks are individual combinations of design and canvas.
 
 The artist model includes fields for the artists' social media profiles, to encourage connectivity and engagement.  This information is optional rather than obligatory, as not all artists may wish to use social media, or to engage with all platforms.
 
-Artworks can be created, updated, and deleted via front-end form.  Artists can be updated via front-end form.  Otherwise, new instances of the models from the artworks app can be created, read, updated, and deleted via the admin panel.  (There does exist a front-end view to delete artists, but as the site currently only has one artist it was deemed advisable to remove front-end links to this view, for now.)
+Each design and canvas must have its own description.  However, artworks do not have their own descriptions, but rather inherit various descriptive fields from related models.  For instance, artwork price is inherited from the canvas rather than being directly associated with the artwork.  This means that, for example, each mug will cost the same regardless of the design printed on it.  Continuing this example: if the price of the mug canvas is changed, the prices of all mug artworks are automatically changed, inheriting from the canvas.  
 
-It is to be desired that, eventually, all objects from the artworks app models - artists, canvasses, designs, and artworks - could be created, read, updated, and deleted via front-end forms.  Further future planned functionality would auto-filled elements of the artwork form based on the primary keys selected from other models.  The strength of this design is central control of various attributes without having to individually edit artworks.
+See the entity relationship diagram, and the images depicting full model details, for further information:
 
+![Entity Relationship Diagram.](/static/images/erd.jpg)
 ![Data model diagram 1.](/static/images/data_model_1.jpg)
 ![Data model diagram 2.](/static/images/data_model_2.jpg)
+
+## CRUD Functionality for Custom Models
+
+Artworks can be viewed/read by all users.  However, artworks can only be created, updated, and deleted by superusers.  Superusers can additionally create and update artists, canvasses, and designs from the front end.  
+
+Front-end create functionality is handled via "Gallery Curation," accessed from the Account dropdown while a superuser is logged in.
+
+Front-end editing and deleting is accessed via various list and detail views.  
+- Clicking "All Artworks" in the Artwork dropdown shows all artworks, each displaying an edit link and a delete link if a superuser is logged in.  (Note: manually inputting an edit or delete link will not provide edit or delete functionality to non-superusers.)
+- Similarly, "By Design" in the Design Dropdown and "By Canvas" in the Canvas dropdown list the designs and canvasses, each with an edit link if a superuser is logged in.
+- Additionally, the flagship artist's detail page, accessed by clicking "About Janka L" in the Artist dropdown, displays an edit link if a superuser is logged in.
+- While front-end deletion functionality is provided for artworks, it is consciously not provided for other model objects. This limitation is intended as a protective feature. If an artwork is deleted accidentally, it can be recreated easily. It is less easy to recreate a canvas or design, as many artworks depend on them for inherited data. Additionally, when only one artist is featured on the site so far, it would seem foolhardy to permit the easy deletion of that artist. 
+- If needed, deletion functionality for artists, designs, and canvasses can be accessed via the admin panel, where it is expected that any deletions would be more clearly intentional on the part of the superuser.
+
 
 # Security
 
