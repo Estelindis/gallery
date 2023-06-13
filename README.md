@@ -31,15 +31,15 @@ Gallery of Dreams is envisaged as an online shop where artists can sell their de
 
 ## User Goals
 - Easily navigate a readable, accessible website from any platform.
-- Browse products by artist, design, and type of product.
+- Browse artworks by artist, design, and canvas.
 - Once a purchase is chosen, make quick and secure payments.
 - Have the option to register a user account, where order information can be quickly accessed and default delivery information can be stored.
 
 ## Owner Goals
-- Present products to users in a clear, attractive manner.
+- Present artworks to users in a clear, attractive manner.
 - Increase user engagement by promoting artists' social media accounts.
-- Have the ability to create, update, and delete artist and product data from the front end of the application.
-- Use centralised methods to apply wide-ranging edits to related canvasses and designs, which will be inherited by all related artworks.
+- Have the ability to create, update, and delete data from the front end of the application.
+- Use centralised methods to apply wide-ranging edits to canvasses and designs, which will be inherited by all related artworks.
 - Process payments securely.
 
 # Agile Development
