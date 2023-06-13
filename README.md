@@ -103,11 +103,9 @@ The artist model includes fields for the artists' social media profiles, to enco
 
 Each design and canvas must have its own description.  However, artworks do not have their own descriptions, but rather inherit various descriptive fields from related models.  For instance, artwork price is inherited from the canvas rather than being directly associated with the artwork.  This means that, for example, each mug will cost the same regardless of the design printed on it.  Continuing this example: if the price of the mug canvas is changed, the prices of all mug artworks are automatically changed, inheriting from the canvas.  
 
-See the entity relationship diagram, and the images depicting full model details, for further information:
+See the entity relationship diagram for further information:
 
 ![Entity Relationship Diagram.](/static/images/erd.jpg)
-![Data model diagram 1.](/static/images/data_model_1.jpg)
-![Data model diagram 2.](/static/images/data_model_2.jpg)
 
 ## CRUD Functionality for Custom Models
 
