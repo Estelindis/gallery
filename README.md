@@ -225,17 +225,19 @@ The following steps are provided as an alternative to cloning the repository. As
 - Click the "New" button from the dashboard, under the header in the top right corner.
 - Choose "Create new app."
 - Enter your application name, which has to be unique. Then select your region and click "Create App."
-- From your project page, click the "Settings" tab and scroll to "Config Vars."
-- Enter "PORT" in the KEY input field, then enter "8000" in the VALUE input field.
-- Click the "Add" button to add the Convig Vars.
+- From your project page, click the "Settings" tab and scroll to "Config Vars."  You will need to create variables, as follows; in each case, click the "Add" button to add the variable.
+1. Key = "PORT"; Value = "8000". 
+2. Key = "SECRET_KEY"; Value = [your django secret key].
+3. For your non-development database (vs. SQLite, if that was used in development): Key = "DATABASE_URL"; Value = [your DB url, e.g. Postgres database url from Elephant SQL].
+4. To send real verification emails: Key = "EMAIL_HOST_USER" and Value = [your email address; free email from Gmail is suggested]; also, Key = "EMAIL_HOST_PASS" and Value = [app password for the associated Gmail account; [see documentation](https://support.google.com/accounts/answer/185833?hl=en)].
+5. To use Stripe, as in this project: Keys = "STRIPE_PUBLIC_KEY", "STRIPE_SECRET_KEY", "STRIPE_WH_SECRET"; Values = [your secret Stripe settings].
+6. To use AWS, as in this project: Key = "USE_AWS" and Value = "True".  Also add secret settings, as follows: Keys = "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"; Values = [your secret AWS settings]. 
 - On the same page, scroll to the buildpacks section and click "Add Buildpack."
-- Add the Python and node.js buildpacks, ensuring that the Python buildpack is listed above the node.js buildpack.
+- Add the Python buildpack.
 - Go back to the tabs at the top of the page, then select the "Deploy" tab.
 - Select the Github deployment method.
 - Search for your repository name, then click the "Connect" button to link your repository.
 - At the bottom of that page, select deployment type: Automatic or Manual. By pressing "Enable Automatic Deploys," the project will redeploy to Heroku every time it is pushed to GitHub. If Manual deployments are preferred, then choose a branch to deploy ("main" by default) and press "Deploy Branch."  In either case, there will be a short wait while the project is deployed.  
-- Broadly speaking, manual deployment is preferred for this kind of project, so that DEBUG in settings.py can be set to True during development but False during deployment.
-
 
 # Acknowledgements
 The code present in the project so far follows the Boutique Ado walkthrough from the Code Institute, adapted for the different data models used in Gallery of Dreams.
