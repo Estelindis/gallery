@@ -10,27 +10,33 @@
 1. [About the Project](#about-the-project)
     1. [User Goals](#user-goals)
     2. [Owner Goals](#owner-goals)
-2. [Design](#design)
+2. [Visual Design](#visual-design)
     1. [Wireframes](#wireframes)
-    2. [Data Model](#data-model)
-    3. [CRUD Functionality for Custom Models](#crud-functionality-for-custom-models)
-3. [Agile Development](#agile-development)
-4. [Security](#security)
+    2. [Screenshots](#screenshots)
+3. [Data Design](#data-design)
+    1. [Data Model](#data-model)
+    2. [CRUD Functionality for Custom Models](#crud-functionality-for-custom-models)
+4. [Agile Development](#agile-development)
+5. [Security](#security)
     1. [Site Security](#site-security)
     2. [Secure Payments](#secure-payments)
-5. [SEO & Marketing](#seo-&-marketing)
+6. [SEO & Marketing](#seo-&-marketing)
     1. [Marketing](#marketing)
     2. [Keywords](#keywords)
     3. [Facebook](#facebook)
     4. [Newsletter](#newsletter)
     5. [GDPR](#gdpr)
     6. [External Links](#external-links)
-6. [Deployment](#deployment)
+7. [Testing](#testing)
+8. [Deployment](#deployment)
     1. [Forking the Repository on GitHub](#forking-the-repository-on-github)
     2. [Cloning the Repository on GitHub](#cloning-the-repository-on-github)
     3. [Project setup](#project-setup)
     4. [Deploying to Heroku](#deploying-to-heroku)
-7. [Acknowledgements](#acknowledgements)
+9. [Acknowledgements](#acknowledgements)
+    1. [Code Inspiration](#code-inspiration)
+    2. [Technologies](#technologies)
+    3. [Thanks](#thanks)
 
 # About the project
 Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products ("canvasses").  At present, the site hosts the work of just one artist: Janka Latečková.  In the site as currently presented, Janka functions the flagship artist; the case for adding more artists will be proven, or disproven, by how successfully her work is showcased.  
@@ -48,6 +54,73 @@ The data model of Gallery of Dreams is designed with a view to strong central co
 - Have the ability to create, update, and delete data from the front end of the application.
 - Use centralised methods to apply wide-ranging edits to canvasses and designs, which will be inherited by all related artworks.
 - Process payments securely.
+
+# Visual Design
+
+## Wireframes
+Visually, Gallery of Dreams was planned to follow the styling of Boutique Ado in a broad sense, while adding a few elements of custom flair (e.g. a distinctive logo).  
+- More custom styling, while highly desirable, was treated as a stretch goal, to be pursued if time permitted after implementing and documenting the site's essential features.
+- Broadly, in the final product, the degree of custom styling implemented was less than what was initially desired.
+- With more time, I would have changed the sharp button and field style to a rounded style; employed a less stark (though still minimalistic) colour scheme; and repositioned some key visual elements.
+
+Mobile wireframes:
+
+![Mobile wireframes.](/static/images/wireframes_mobile.jpg)
+
+Desktop wirefame: home page.
+
+![Desktop home wireframe.](/static/images/wireframe_home_desktop.jpg)
+
+Desktop list wirefame: artwork list.
+
+![Desktop wireframe.](/static/images/wireframe_list_desktop.jpg)
+
+Desktop detail wirefame: artwork detail.
+
+![Desktop wireframe.](/static/images/wireframe_art_detail_desktop.jpg)
+
+## Screenshots
+The wireframes above can be compared to screenshots from the deployed site.
+
+![Gallery index.](/static/images/gallery_index.jpg)
+![Artwork detail.](/static/images/artwork_detail.jpg)
+![Artworks.](/static/images/artworks.jpg)
+![Canvas.](/static/images/canvas.jpg)
+![Designs.](/static/images/designs.jpg)
+
+# Data Design
+
+## Data Model
+As well as its custom models, Gallery of Dreams employs the following unaltered models from the Boutique Ado walkthrough: Order; OrderLineItem; and UserProfile.  The unaltered UserProfile model permits logged-in users to read and update their profiles.  All further commentary in this Data Model section concerns the project's four custom models.
+
+The data model for the custom models of Gallery of Dreams is organised to describe artists, designs, canvasses, and artworks.  The main strength of this data model is central control of various artwork attributes without having to individually edit artworks.
+- Artists are the persons responsible for original drawings and paintings. 
+- Designs are the original drawings and paintings themseves.
+- Canvasses are the types of products on which designs are printed.  
+- Artworks are individual combinations of design and canvas.
+
+The artist model includes fields for the artists' social media profiles, to encourage connectivity and engagement.  This information is optional rather than obligatory, as not all artists may wish to use social media, or to engage with all platforms.
+
+Each design and canvas must have its own description.  However, artworks do not have their own descriptions, but rather inherit various descriptive fields from related models.  For instance, artwork price is inherited from the canvas rather than being directly associated with the artwork.  This means that, for example, each mug will cost the same regardless of the design printed on it.  Continuing this example: if the price of the mug canvas is changed, the prices of all mug artworks are automatically changed, inheriting from the canvas.  
+
+See the entity relationship diagram, and the images depicting full model details, for further information:
+
+![Entity Relationship Diagram.](/static/images/erd.jpg)
+![Data model diagram 1.](/static/images/data_model_1.jpg)
+![Data model diagram 2.](/static/images/data_model_2.jpg)
+
+## CRUD Functionality for Custom Models
+
+Artworks can be viewed/read by all users.  However, artworks can only be created, updated, and deleted by superusers.  Superusers can additionally create and update artists, canvasses, and designs from the front end.  
+
+Front-end create functionality is handled via "Gallery Curation," accessed from the Account dropdown while a superuser is logged in.
+
+Front-end editing and deleting is accessed via various list and detail views.  
+- Clicking "All Artworks" in the Artwork dropdown shows all artworks, each displaying an edit link and a delete link if a superuser is logged in.  (Note: manually inputting an edit or delete link will not provide edit or delete functionality to non-superusers.)
+- Similarly, "By Design" in the Design Dropdown and "By Canvas" in the Canvas dropdown list the designs and canvasses, each with an edit link if a superuser is logged in.
+- Additionally, the flagship artist's detail page, accessed by clicking "About Janka L" in the Artist dropdown, displays an edit link if a superuser is logged in.
+- While front-end deletion functionality is provided for artworks, it is consciously not provided for other model objects. This limitation is intended as a protective feature. If an artwork is deleted accidentally, it can be recreated easily. It is less easy to recreate a canvas or design, as many artworks depend on them for inherited data. Additionally, when only one artist is featured on the site so far, it would seem foolhardy to permit the easy deletion of that artist. 
+- If needed, deletion functionality for artists, designs, and canvasses can be accessed via the admin panel, where it is expected that any deletions would be more clearly intentional on the part of the superuser.
 
 # Agile Development
 The [GitHub kanban board for Gallery of Dreams](https://github.com/users/Estelindis/projects/1) describes an agile development process on the basis of user stories.  Stories are categorised according to epics/milestones, development priority, and completion status.
@@ -82,63 +155,6 @@ The [GitHub kanban board for Gallery of Dreams](https://github.com/users/Estelin
 |[21](https://github.com/Estelindis/gallery/issues/21)|Delete artworks|As a superuser, I can delete an artwork via the front end so that I can remove items from the shop without needing the admin panel.|Admin|Must have|Yes|
 |[22](https://github.com/Estelindis/gallery/issues/22)|Create canvasses & designs|As a superuser, I can create a canvas or a design via the front end so that I can add canvasses or designs to the shop without needing the admin panel.|Admin|Could have|Yes|
 |[23](https://github.com/Estelindis/gallery/issues/23)|Create canvasses & designs|As a superuser, I can edit a canvas or a design via the front end so that I can modify canvasses or designs without needing the admin panel.|Admin|Could have|Yes|
-
-
-# Design
-
-## Wireframes
-Visually, Gallery of Dreams was planned to follow the styling of Boutique Ado in a broad sense, while adding a few elements of custom flair (e.g. a distinctive logo).  
-- More custom styling, while highly desirable, was treated as a stretch goal, to be pursued if time permitted after implementing and documenting the site's essential features.
-- Broadly, in the final product, the degree of custom styling implemented was less than what was initially desired.
-
-Mobile wireframes:
-
-![Mobile wireframes.](/static/images/wireframes_mobile.jpg)
-
-Desktop wirefame: home page.
-
-![Desktop home wireframe.](/static/images/wireframe_home_desktop.jpg)
-
-Desktop list wirefame: artwork list.
-
-![Desktop wireframe.](/static/images/wireframe_list_desktop.jpg)
-
-Desktop detail wirefame: artwork detail.
-
-![Desktop wireframe.](/static/images/wireframe_art_detail_desktop.jpg)
-
-## Data Model
-As well as its custom models, Gallery of Dreams employs the following unaltered models from the Boutique Ado walkthrough: Order; OrderLineItem; and UserProfile.  The unaltered UserProfile model permits logged-in users to read and update their profiles.  All further commentary in this Data Model section concerns the project's four custom models.
-
-The data model for the custom models of Gallery of Dreams is organised to describe artists, designs, canvasses, and artworks.  The main strength of this data model is central control of various artwork attributes without having to individually edit artworks.
-- Artists are the persons responsible for original drawings and paintings. 
-- Designs are the original drawings and paintings themseves.
-- Canvasses are the types of products on which designs are printed.  
-- Artworks are individual combinations of design and canvas.
-
-The artist model includes fields for the artists' social media profiles, to encourage connectivity and engagement.  This information is optional rather than obligatory, as not all artists may wish to use social media, or to engage with all platforms.
-
-Each design and canvas must have its own description.  However, artworks do not have their own descriptions, but rather inherit various descriptive fields from related models.  For instance, artwork price is inherited from the canvas rather than being directly associated with the artwork.  This means that, for example, each mug will cost the same regardless of the design printed on it.  Continuing this example: if the price of the mug canvas is changed, the prices of all mug artworks are automatically changed, inheriting from the canvas.  
-
-See the entity relationship diagram, and the images depicting full model details, for further information:
-
-![Entity Relationship Diagram.](/static/images/erd.jpg)
-![Data model diagram 1.](/static/images/data_model_1.jpg)
-![Data model diagram 2.](/static/images/data_model_2.jpg)
-
-## CRUD Functionality for Custom Models
-
-Artworks can be viewed/read by all users.  However, artworks can only be created, updated, and deleted by superusers.  Superusers can additionally create and update artists, canvasses, and designs from the front end.  
-
-Front-end create functionality is handled via "Gallery Curation," accessed from the Account dropdown while a superuser is logged in.
-
-Front-end editing and deleting is accessed via various list and detail views.  
-- Clicking "All Artworks" in the Artwork dropdown shows all artworks, each displaying an edit link and a delete link if a superuser is logged in.  (Note: manually inputting an edit or delete link will not provide edit or delete functionality to non-superusers.)
-- Similarly, "By Design" in the Design Dropdown and "By Canvas" in the Canvas dropdown list the designs and canvasses, each with an edit link if a superuser is logged in.
-- Additionally, the flagship artist's detail page, accessed by clicking "About Janka L" in the Artist dropdown, displays an edit link if a superuser is logged in.
-- While front-end deletion functionality is provided for artworks, it is consciously not provided for other model objects. This limitation is intended as a protective feature. If an artwork is deleted accidentally, it can be recreated easily. It is less easy to recreate a canvas or design, as many artworks depend on them for inherited data. Additionally, when only one artist is featured on the site so far, it would seem foolhardy to permit the easy deletion of that artist. 
-- If needed, deletion functionality for artists, designs, and canvasses can be accessed via the admin panel, where it is expected that any deletions would be more clearly intentional on the part of the superuser.
-
 
 # Security
 
@@ -231,6 +247,10 @@ All external links are directly connected to Gallery of Dreams, linking to socia
 - No external links are paid or distrusted (which would require a "nofollow" relationship attribute).
 - No external links are sponsored or compensated (which would require a "sponsored" relationship attribute).
 
+# Testing
+
+Placeholder text.
+
 # Deployment
 
 ## Forking the Repository on GitHub
@@ -282,11 +302,21 @@ The following steps are provided as an alternative to cloning the repository. As
 - At the bottom of that page, select deployment type: Automatic or Manual. By pressing "Enable Automatic Deploys," the project will redeploy to Heroku every time it is pushed to GitHub. If Manual deployments are preferred, then choose a branch to deploy ("main" by default) and press "Deploy Branch."  In either case, there will be a short wait while the project is deployed.  
 
 # Acknowledgements
-The code present in the project so far follows the Boutique Ado walkthrough from the Code Institute, adapted for the different data models used in Gallery of Dreams.
 
-![Gallery index.](/static/images/gallery_index.jpg)
-![Artwork detail.](/static/images/artwork_detail.jpg)
-![Artworks.](/static/images/artworks.jpg)
-![Canvas.](/static/images/canvas.jpg)
-![Designs.](/static/images/designs.jpg)
+## Code Inspiration
+The code present in the project so far follows the Boutique Ado walkthrough from the Code Institute, adapted for the custom data models used in Gallery of Dreams.  As Boutique Ado was used as scaffolding with which to build Gallery of Dreams, [Chris Z](https://github.com/ckz8780) deserves acknowledgement for his inspiring code leadership.
 
+## Technologies
+- [HTML5](https://en.wikipedia.org/wiki/HTML)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Django](https://www.djangoproject.com/)
+- [Heroku](https://www.heroku.com)
+- [Elephant SQL](https://www.elephantsql.com/)
+- [Amazon Web Services](https://aws.amazon.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Google Fonts](https://fonts.google.com)
+- [GitHub](https://github.com/)
+
+## Thanks
+This project was completed during a time of challenges and opportunities, including illness and a new job.  For patient tolerance of the ups and downs of my circumstances, I owe utmost thanks to Code Institute staff, particularly Student Care.  The facilitator of our msletb-nov-2021 cohort, Kasia, deserves a special mention.  I also wish to thank my mentor Darío, the members of my cohort, my new work colleagues, and my family and friends.
