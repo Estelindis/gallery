@@ -14,13 +14,17 @@
     1. [Data Models](#data-models)
 3. [Agile Development](#agile-development)
     1. [Data Models](#data-models)
-4. [SEO & Marketing](#seo-&-marketing)
+4. [Security](#security)
+    1. [Site Security](#site-security)
+    2. [Secure Payments](#secure-payments)
+5. [SEO & Marketing](#seo-&-marketing)
     1. [Marketing](#marketing)
     2. [Keywords](#keywords)
     3. [Facebook](#facebook)
     4. [Newsletter](#newsletter)
     5. [GDPR](#gdpr)
-5. [Acknowledgements](#acknowledgements)
+    6. [External Links](#external-links)
+6. [Acknowledgements](#acknowledgements)
 
 # About the project
 Gallery of Dreams is envisaged as an online shop where artists can sell their designs printed on a variety of products ("canvasses").  At present, the site remains a work in progress, hosting the work of just one artist.  The data model shows significant differentiation from the Code Institute Boutique Ado walkthrough, being designed with a view to strong central control.  With so many potential combinations of canvas plus design, the number of artworks can balloon quite quickly, so the ability to change many artworks with a single edit to one canvas or design is the guiding principle.  However, some other elements of the project, particularly the styling, have yet to be strongly differentiated from the walkthrough.
@@ -88,6 +92,17 @@ It is to be desired that, eventually, all objects from the artworks app models -
 
 ![Data model diagram 1.](/static/images/data_model_1.jpg)
 ![Data model diagram 2.](/static/images/data_model_2.jpg)
+
+# Security
+
+## Site Security
+Gallery of Dreams implements role-based login and registration functionality.
+- Views that should only be accessible when a user is logged in are secured via the "@login_required" decorator. 
+ If non-logged-in users attempt to access these views, either by clicking a site link or by typing a URL directly into the address bar, they are redirected to the login page.
+- Views whose functions should only be accessible to superusers include a superuser check.  If logged-in users who are not superusers attempt to access these functions, e.g. by typing an artwork edit URL directly into the address bar, they receive an error message and are redirected to the front page.
+
+## Secure Payments
+Payments on Gallery of Dreams are handled via Stripe, utilising secure payment tools.
 
 # SEO & Marketing
 
@@ -161,6 +176,12 @@ Gallery of Dreams has newsletter sign-up functionality embedded in the footer of
 ## GDPR
 
 A link to the privacy policy of Gallery of Dreams is present in the footer of the index page, via the user shield icon.
+
+## External Links
+
+All external links are directly connected to Gallery of Dreams, linking to social media for the shop or its flagship artist.  These links function as unpaid marketing, harnessing the power of the internet's "word of mouth."
+- No external links are paid or distrusted (which would require a "nofollow" relationship attribute).
+- No external links are sponsored or compensated (which would require a "sponsored" relationship attribute).
 
 # Acknowledgements
 The code present in the project so far follows the Boutique Ado walkthrough from the Code Institute, adapted for the different data models used in Gallery of Dreams.
