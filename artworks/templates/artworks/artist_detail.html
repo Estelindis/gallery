@@ -40,34 +40,48 @@
                     {% endif %}
                     </h5>
                     <p class="mt-3" style="text-align: justify;">{{ artist.description }}</p>
-                    <p class="mt-3">
-                        <span class="icon">
-                            <i class="fa fa-map-marker"></i>
-                        </span> <strong>{{ artist.location }}</strong></p> 
-                    <p class="mt-3">
-                        <span class="icon">
-                            <i class="fa fa-facebook"></i>
-                        </span> <a href="{{ artist.facebook_url }}" target="_blank" rel="external">{{ artist.facebook_url }}</a></p> 
-                    <p class="mt-3">
-                        <span class="icon">
-                            <i class="fa fa-twitter"></i>
-                        </span> <a href="{{ artist.twitter_url }}" target="_blank" rel="external">{{ artist.twitter_url }}</a></p>
-                    <p class="mt-3">
-                        <span class="icon">
-                            <i class="fa fa-instagram"></i>
-                        </span> <a href="{{ artist.insta_url }}" target="_blank" rel="external">{{ artist.insta_url }}</a></p>
-                    <p class="mt-3">
-                        <span class="icon">
-                            <i class="fa fa-deviantart"></i>
-                        </span> <a href="{{ artist.deviant_url }}" target="_blank" rel="external">{{ artist.deviant_url }}</a></p> 
-                    <p class="mt-3">
-                        <span class="icon">
-                            <i class="fa fa-pinterest"></i>
-                        </span> <a href="{{ artist.pin_url }}" target="_blank" rel="external">{{ artist.pin_url }}</a></p> 
-                    <p class="mt-3">
-                        <span class="icon">
-                            <i class="fa fa-etsy"></i>
-                        </span> <a href="{{ artist.etsy_url }}" target="_blank" rel="external">{{ artist.etsy_url }}</a></p>                  
+                    {% if artist.location %}
+                        <p class="mt-3">
+                            <span class="icon">
+                                <i class="fa fa-map-marker"></i>
+                            </span> <strong>{{ artist.location }}</strong></p>
+                    {% endif %}
+                    {% if artist.facebook_url %}
+                        <p class="mt-3">
+                            <span class="icon">
+                                <i class="fa fa-facebook"></i>
+                            </span> <a href="{{ artist.facebook_url }}" target="_blank" rel="external">{{ artist.facebook_url }}</a></p> 
+                    {% endif %}
+                    {% if artist.twitter_url %}
+                        <p class="mt-3">
+                            <span class="icon">
+                                <i class="fa fa-twitter"></i>
+                            </span> <a href="{{ artist.twitter_url }}" target="_blank" rel="external">{{ artist.twitter_url }}</a></p>
+                    {% endif %}
+                    {% if artist.insta_url %}
+                        <p class="mt-3">
+                            <span class="icon">
+                                <i class="fa fa-instagram"></i>
+                            </span> <a href="{{ artist.insta_url }}" target="_blank" rel="external">{{ artist.insta_url }}</a></p>
+                    {% endif %}
+                    {% if artist.deviant_url %}
+                        <p class="mt-3">
+                            <span class="icon">
+                                <i class="fa fa-deviantart"></i>
+                            </span> <a href="{{ artist.deviant_url }}" target="_blank" rel="external">{{ artist.deviant_url }}</a></p> 
+                    {% endif %}
+                    {% if artist.pin_url %}
+                        <p class="mt-3">
+                            <span class="icon">
+                                <i class="fa fa-pinterest"></i>
+                            </span> <a href="{{ artist.pin_url }}" target="_blank" rel="external">{{ artist.pin_url }}</a></p> 
+                    {% endif %}
+                    {% if artist.etsy_url %}
+                        <p class="mt-3">
+                            <span class="icon">
+                                <i class="fa fa-etsy"></i>
+                            </span> <a href="{{ artist.etsy_url }}" target="_blank" rel="external">{{ artist.etsy_url }}</a></p>  
+                    {% endif %}                
                 </div>
             </div>
         </div>

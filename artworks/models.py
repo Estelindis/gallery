@@ -9,17 +9,24 @@ class Artist(models.Model):
     SKU Codes from Artist, Canvas, and Design are
     concatenated to render the Artwork SKU.
     """
-    name = models.CharField(max_length=80)
+    name = models.CharField(
+        max_length=80,
+        null=True,
+        blank=False)
     sku_code = models.CharField(
         max_length=6,
-        verbose_name="SKU Code")
+        verbose_name="SKU Code",
+        null=True,
+        blank=False)
     friendly_name = models.CharField(
         max_length=80,
-        verbose_name="Friendly Name")
+        verbose_name="Friendly Name",
+        null=True,
+        blank=False)
     full_name = models.CharField(
         max_length=240,
         null=True,
-        blank=True,
+        blank=False,
         verbose_name="Full Name")
     location = models.CharField(
         max_length=240,
@@ -27,7 +34,7 @@ class Artist(models.Model):
         blank=True)
     description = models.TextField(
         null=True,
-        blank=True)
+        blank=False)
     image_url = models.URLField(
         max_length=1024,
         null=True,
@@ -93,13 +100,20 @@ class Canvas(models.Model):
     SKU Codes from Artist, Canvas, and Design are
     concatenated to render the Artwork SKU.
     """
-    name = models.CharField(max_length=80)
+    name = models.CharField(
+        max_length=80,
+        null=True,
+        blank=False)
     sku_code = models.CharField(
         max_length=12,
-        verbose_name="SKU Code")
+        verbose_name="SKU Code",
+        null=True,
+        blank=False)
     friendly_name = models.CharField(
         max_length=80,
-        verbose_name="Friendly Name")
+        verbose_name="Friendly Name",
+        null=True,
+        blank=False)
     description = models.TextField(null=True, blank=False)
     material = models.TextField(null=True, blank=False)
     dimensions = models.TextField(null=True, blank=False)
@@ -134,13 +148,20 @@ class Design(models.Model):
     SKU Codes from Artist, Canvas, and Design are
     concatenated to render the Artwork SKU.
     """
-    name = models.CharField(max_length=80)
+    name = models.CharField(
+        max_length=80,
+        null=True,
+        blank=False)
     sku_code = models.CharField(
         max_length=12,
-        verbose_name="SKU Code")
+        verbose_name="SKU Code",
+        null=True,
+        blank=False)
     friendly_name = models.CharField(
         max_length=80,
-        verbose_name="Friendly Name")
+        verbose_name="Friendly Name",
+        null=True,
+        blank=False)
     description = models.TextField(null=True, blank=False)
     material = models.TextField(null=True, blank=False)
     image_url = models.URLField(
@@ -154,7 +175,7 @@ class Design(models.Model):
     artist = models.ForeignKey(
         'Artist',
         null=True,
-        blank=True,
+        blank=False,
         on_delete=models.SET_NULL)
 
     def __str__(self):
