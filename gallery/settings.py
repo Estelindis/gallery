@@ -24,6 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+"""
+Note: the variable below does not indicate that the production version
+of the site has Debug set to True.  It gives the option for debugging
+to be toggled dynamically in the local version (on GitPod).
+It does not turn on debugging in the deployed version (on Heroku).
+Indeed, setting this variable on Heroku is broadly not recommended.
+Debugging should mostly be conducted in the GitPod version of the site.
+"""
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
